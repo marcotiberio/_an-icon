@@ -410,11 +410,16 @@ textarea {
 
 h1,
 h2,
-h3,
 h4,
 h5,
 h6 {
 	clear: both;
+}
+
+h3 {
+	clear: both;
+	margin-block-start: 0;
+	font-family: "Helvetica Neue", sans-serif;
 }
 
 p {
