@@ -533,21 +533,25 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: #0000ff;
+	text-shadow: 0px 0px 3px rgba(0,0,0,0.6);
 }
 
 a:visited {
-	color: #800080;
+	color: #0000ff;
+	text-shadow: 0px 0px 3px rgba(0,0,0,0.6);
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #191970;
+	color: #0000ff;
+	text-shadow: 0px 0px 3px rgba(0,0,0,0.6);
+	text-decoration: underline;
 }
 
 a:focus {
-	outline: thin dotted;
+	outline: 0;
 }
 
 a:hover,
@@ -986,10 +990,20 @@ body {
     padding: 1.5%;
 }
 
+.site-header {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
 .main-navigation {
-    display: block;
-    width: fit-content;
-    position: fixed;
-    top: 1.5%;
-    right: 1.5%;
+    
+}
+
+#primary-menu {
+	display: flex;
+	flex-direction: row;
+}
+
+#primary-menu li {
+	margin-right: 20px;
 }
