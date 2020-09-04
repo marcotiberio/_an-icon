@@ -74,6 +74,12 @@ get_header();
 		</div>
 	</section>
 
+	<section id="seminars">
+		<div class="section-title">
+			<p>Seminars</p>
+		</div>
+	</section>
+
 </main><!-- #main -->
 
 <?php
