@@ -26,11 +26,15 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
+		
 
 		<section class="intro-text">
-			<?php if ( get_field('intro_text') ) : ?>
-				<?php echo get_field('intro_text'); ?>
-			<?php endif; ?>
+			<div></div>
+			<div>
+				<?php if ( get_field('intro_text') ) : ?>
+					<?php echo get_field('intro_text'); ?>
+				<?php endif; ?>
+			</div>
 		</section>
 
 	</main><!-- #main -->
