@@ -13,7 +13,7 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			
+			<?php if(function_exists('ditty_news_ticker')){ditty_news_ticker(74);} ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
