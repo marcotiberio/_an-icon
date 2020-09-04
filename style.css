@@ -54,6 +54,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Generic
 --------------------------------------------------------------*/
 
+
+
+
+@font-face {
+	font-family: 'Helvetica Neue Medium';
+	font-style: normal;
+	font-weight: normal;
+	src: local('assets/fonts/HelveticaNeueMedium.woff'), url('https://github.com/marcotiberio/_an-icon/blob/master/assets/fonts/HelveticaNeueMedium.woff') format('woff');
+}
+
 /* Normalize
 --------------------------------------------- */
 
@@ -403,7 +413,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Helvetica Neue Medium";
 	font-size: 1rem;
 	line-height: 1.5;
 }
