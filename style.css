@@ -419,6 +419,10 @@ h6 {
 
 p {
 	margin-bottom: 1.5em;
+	margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 dfn,
