@@ -80,23 +80,33 @@ get_header();
 		</div>
 		<div class="inside">
 			<div class="left">
-				<p>
-					The Seminar of Philosophy of Image is a research group which aims at investigating contemporary
-					issues in aesthetics and visual culture. The Serminar organises meetings with international speakers
-					open to all public. Each gathering consists of a talk and a session of Q&A.
+				<div class="section-intro">
+					<p>
+						The Seminar of Philosophy of Image is a research group which aims at investigating contemporary
+						issues in aesthetics and visual culture. The Serminar organises meetings with international
+						speakers
+						open to all public. Each gathering consists of a talk and a session of Q&A.
 
-					The Seminar has a transdisciplinary approach, but retains firm roots in philosophical disciplines.
-					Therefore, we host contributions by scholars coming from, but not limited to anthropology, history
-					of art, media studies, philosophy, psychology, and visual culture studies.
+						The Seminar has a transdisciplinary approach, but retains firm roots in philosophical
+						disciplines.
+						Therefore, we host contributions by scholars coming from, but not limited to anthropology,
+						history
+						of art, media studies, philosophy, psychology, and visual culture studies.
 
-					Scientific Coordinator: Prof. Andrea Pinotti
-					Organizing Committee: Federica Cavaletti, Pietro Conte, Anna Caterina Dalmasso, Giancarlo Grossi,
-					Giacomo Mercuriali.
+						Scientific Coordinator: Prof. Andrea Pinotti
+						Organizing Committee: Federica Cavaletti, Pietro Conte, Anna Caterina Dalmasso, Giancarlo
+						Grossi,
+						Giacomo Mercuriali.
 
-					From 2019 to 2024, the Seminar of Philosophy of Image is integrated into the activities of the ERC
-					Advanced Grant AN-ICON. An-Iconology: History, Theory, and Practices of Environmental Images
-					coordinated by prof. Andrea Pinotti.
-				</p>
+						From 2019 to 2024, the Seminar of Philosophy of Image is integrated into the activities of the
+						ERC
+						Advanced Grant AN-ICON. An-Iconology: History, Theory, and Practices of Environmental Images
+						coordinated by prof. Andrea Pinotti.
+					</p>
+				</div>
+				<div class="archive">
+					<p>- Illusion 2019/2020</p>
+				</div>
 			</div>
 			<div class="right">
 				<div class="post-list">
