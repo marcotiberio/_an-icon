@@ -100,6 +100,7 @@ get_header();
 			</div>
 			<div class="right">
 				<div class="post-list">
+					<h3 class="subsection-title">2019/2020</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
 						laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
@@ -107,6 +108,7 @@ get_header();
 						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 				<div class="year-intro">
+					<h3 class="subsection-title">Illusion</h3>
 					<p>When dealing with environments that simulate reality, illusion is one of the first concepts that
 						must be tackled. Yet how is illusion to be interpreted? Is it an unconscious deception
 						accomplished through a false perception, or is it rather a lusory attitude adopted in a peculiar
