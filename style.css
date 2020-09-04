@@ -985,3 +985,11 @@ body {
     height: 100vh;
     padding: 1.5%;
 }
+
+.main-navigation {
+    display: block;
+    width: fit-content;
+    position: fixed;
+    top: 1.5%;
+    right: 1.5%;
+}
