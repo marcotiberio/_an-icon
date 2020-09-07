@@ -26,22 +26,12 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$anicon_description = get_bloginfo( 'description', 'display' );
-			if ( $anicon_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $anicon_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
+			<svg width="173" height="56" viewBox="0 0 173 56">
+				<text id="An-Iconology:_History_Theory_and_Practices_of_Environmental_Images" data-name="An-Iconology: History,
+				Theory, and Practices of
+				Environmental Images" transform="translate(0 12)" fill="blue" font-size="16" font-family="Helvetica"><tspan x="0" y="0">An-Iconology: History,</tspan><tspan x="0" y="20">Theory, and Practices of</tspan><tspan x="0" y="40">Environmental Images</tspan></text>
+			</svg>
+			<img id="logo" src="http://anicon.local/wp-content/uploads/2020/09/throbber-1.png" alt="">
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
