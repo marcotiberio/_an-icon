@@ -3,11 +3,10 @@ $(function() {
         scrollLoc = $(document).scrollTop();
     $(window).scroll(function() {
         var newLoc = $(document).scrollTop();
-        var x = 1;
-        var y = 15;
-        var z = 1;
-        var rotationStr = "rotate(" + rotation + "45deg)";
-        $(".gear").css({
+        var diff = scrollLoc - newLoc;
+        rotation += diff, scrollLoc = newLoc;
+        var rotationStr = "rotate(" + rotation + "deg)";
+        $("#logo").css({
             "-webkit-transform": rotationStr,
             "-moz-transform": rotationStr,
             "transform": rotationStr
