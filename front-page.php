@@ -44,28 +44,7 @@ get_header();
 		<div class="inside">
 			<div class="left">
 				<div class="section-intro">
-					<p>
-						The Seminar of Philosophy of Image is a research group which aims at investigating contemporary
-						issues in aesthetics and visual culture. The Serminar organises meetings with international
-						speakers
-						open to all public. Each gathering consists of a talk and a session of Q&A.
-
-						The Seminar has a transdisciplinary approach, but retains firm roots in philosophical
-						disciplines.
-						Therefore, we host contributions by scholars coming from, but not limited to anthropology,
-						history
-						of art, media studies, philosophy, psychology, and visual culture studies.
-
-						Scientific Coordinator: Prof. Andrea Pinotti
-						Organizing Committee: Federica Cavaletti, Pietro Conte, Anna Caterina Dalmasso, Giancarlo
-						Grossi,
-						Giacomo Mercuriali.
-
-						From 2019 to 2024, the Seminar of Philosophy of Image is integrated into the activities of the
-						ERC
-						Advanced Grant AN-ICON. An-Iconology: History, Theory, and Practices of Environmental Images
-						coordinated by prof. Andrea Pinotti.
-					</p>
+					<?php the_field('seminars_intro'); ?>
 				</div>
 				<div class="archive">
 					<p>- Illusion 2019/2020</p>
@@ -121,88 +100,34 @@ get_header();
 		<div class="section-title">
 			<p>Team</p>
 		</div>
-		<div class="inside">
-			<div class="left">
-				<p class="name">Andrea Pinotti</p>
-				<p class="role">Principal Investigator</p>
-			</div>
-			<div class="center">
-				<img id="profilePic" src="http://anicon.local/wp-content/uploads/2020/09/Pinotti.png" alt="Pinotti">
-			</div>
-			<div class="right">
-				<p class="bio">
-					(PhD in Philosophy 1998) He is Full Professor of Aesthetics at the Department of Philosophy “Piero
-					Martinetti” of the State University of Milan, where he teaches Aesthetics and Representation and
-					Image Theories. He is the coordinator of the Doctoral Course in Philosophy and Human Sciences.
-
-					He has been fellow at the Italian Academy for Advanced Studies in America at Columbia University,
-					New York (2003-04); Directeur d’études associé at the École des hautes études en sciences sociales,
-					Paris (2008); Fritz Saxl Senior fellow at the Warburg Institute, University of London (2010);
-					professeur invité at the Université Jean-Moulin, Lyon 3 (2011); Gastwissenschaftler at the ZfL in
-					Berlin (2012); directeur d’études associé at the FMSH in Paris (2015); Eurias-Marie-Curie Senior
-					fellow at the IEA in Paris (2017-18).
-
-					He has been Directeur de Programme at the CIPH (Collège International de Philosophie) in Paris on
-					the programme Monument Nonument. Politique de l’image mémorielle, esthétique de la mémoire
-					matérielle. In 2018 he has been awarded the Wissenschaftspreis der Aby-Warburg-Stiftung.
-				</p>
-			</div>
-		</div>
-		<div class="inside">
-			<div class="left">
-				<p class="name">Andrea Pinotti</p>
-				<p class="role">Principal Investigator</p>
-			</div>
-			<div class="center">
-				<img id="profilePic" src="http://anicon.local/wp-content/uploads/2020/09/Pinotti.png" alt="Pinotti">
-			</div>
-			<div class="right">
-				<p class="bio">
-					(PhD in Philosophy 1998) He is Full Professor of Aesthetics at the Department of Philosophy “Piero
-					Martinetti” of the State University of Milan, where he teaches Aesthetics and Representation and
-					Image Theories. He is the coordinator of the Doctoral Course in Philosophy and Human Sciences.
-
-					He has been fellow at the Italian Academy for Advanced Studies in America at Columbia University,
-					New York (2003-04); Directeur d’études associé at the École des hautes études en sciences sociales,
-					Paris (2008); Fritz Saxl Senior fellow at the Warburg Institute, University of London (2010);
-					professeur invité at the Université Jean-Moulin, Lyon 3 (2011); Gastwissenschaftler at the ZfL in
-					Berlin (2012); directeur d’études associé at the FMSH in Paris (2015); Eurias-Marie-Curie Senior
-					fellow at the IEA in Paris (2017-18).
-
-					He has been Directeur de Programme at the CIPH (Collège International de Philosophie) in Paris on
-					the programme Monument Nonument. Politique de l’image mémorielle, esthétique de la mémoire
-					matérielle. In 2018 he has been awarded the Wissenschaftspreis der Aby-Warburg-Stiftung.
-				</p>
-			</div>
-		</div>
-		<div class="inside">
-			<div class="left">
-				<p class="name">Andrea Pinotti</p>
-				<p class="role">Principal Investigator</p>
-			</div>
-			<div class="center">
-				<img id="profilePic" src="http://anicon.local/wp-content/uploads/2020/09/Pinotti.png" alt="Pinotti">
-			</div>
-			<div class="right">
-				<p class="bio">
-					(PhD in Philosophy 1998) He is Full Professor of Aesthetics at the Department of Philosophy “Piero
-					Martinetti” of the State University of Milan, where he teaches Aesthetics and Representation and
-					Image Theories. He is the coordinator of the Doctoral Course in Philosophy and Human Sciences.
-
-					He has been fellow at the Italian Academy for Advanced Studies in America at Columbia University,
-					New York (2003-04); Directeur d’études associé at the École des hautes études en sciences sociales,
-					Paris (2008); Fritz Saxl Senior fellow at the Warburg Institute, University of London (2010);
-					professeur invité at the Université Jean-Moulin, Lyon 3 (2011); Gastwissenschaftler at the ZfL in
-					Berlin (2012); directeur d’études associé at the FMSH in Paris (2015); Eurias-Marie-Curie Senior
-					fellow at the IEA in Paris (2017-18).
-
-					He has been Directeur de Programme at the CIPH (Collège International de Philosophie) in Paris on
-					the programme Monument Nonument. Politique de l’image mémorielle, esthétique de la mémoire
-					matérielle. In 2018 he has been awarded the Wissenschaftspreis der Aby-Warburg-Stiftung.
-				</p>
-			</div>
-		</div>
+		<?php if( have_rows('team') ): ?>
+			<?php while( have_rows('team') ): the_row(); 
+				$name = get_sub_field('name');
+				$role = get_sub_field('role');
+				$profile_pic = get_sub_field('profile_pic');
+				$bio = get_sub_field('bio');
+				?>
+				<div class="inside">
+					<div class="left">
+						<p class="name"><?php the_sub_field('name'); ?></p>
+						<p class="role"><?php the_sub_field('role'); ?></p>
+					</div>
+					<div class="center">
+					<?php 
+						$profile_pic = get_sub_field('profile_pic');
+						if( !empty( $profile_pic ) ): ?>
+							<?php echo wp_get_attachment_image( $profile_pic['id'], 'full' ); ?>
+					<?php endif; ?>
+					</div>
+					<div class="right">
+						<p class="bio"><?php the_sub_field('bio'); ?></p>
+					</div>
+				</div>
+			<?php endwhile; ?>
+		<?php endif; ?>
 	</section>
+
+			
 
 	<section id="contact">
 		<div class="section-title">
@@ -210,12 +135,8 @@ get_header();
 		</div>
 		<div class="inside">
 			<div class="left">
-				<p>an-icon(at)unimi.it</p>
-				<small>
-					Università degli Studi di Milano, Dipartimento di Filosofia,
-					<br>
-					Via Festa del Perdono 7, 20122, Milano, Italy
-				</small>
+				<a href="mailto:<?php the_sub_field('email'); ?>" class="email"><?php the_sub_field('email'); ?></p></a>
+				<small><?php the_field('address'); ?></small>
 			</div>
 			<div class="right">
 				<div class="contact-form">
