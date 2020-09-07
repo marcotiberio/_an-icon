@@ -135,8 +135,12 @@ get_header();
 		</div>
 		<div class="inside">
 			<div class="left">
-				<a href="mailto:<?php the_field('email'); ?>" class="email"><?php the_field('email'); ?></p></a>
-				<small><?php the_field('address'); ?></small>
+				<a href="mailto:<?php the_field('email'); ?>" class="email"><?php the_field('email'); ?></a>
+				<small>
+					Università degli Studi di Milano, Dipartimento di Filosofia,
+					<br>
+					Via Festa del Perdono 7, 20122, Milano, Italy
+				</small>
 			</div>
 			<div class="right">
 				<div class="contact-form">
