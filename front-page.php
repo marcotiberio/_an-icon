@@ -147,15 +147,10 @@ get_header();
 	</section>
 
 	<section id="events">
-		<div class="left">
-		</div>
+		<div class="left"></div>
 		<div class="right">
-			<div class="top">
-
-			</div>
-			<div class="bottom">
-
-			</div>
+			<div class="top"></div>
+			<div class="bottom"></div>
 		</div>
 	</section>
 
@@ -516,6 +511,16 @@ get_header();
 	</section><!-- #colophon -->
 
 </main><!-- #main -->
+
+<script>
+
+	var logo = document.getElementByClassName("custom-logo-link"),
+		
+	window.addEventListener("scroll", function() {
+		logo.style.transform = "rotate("+window.pageYOffset+"deg)";
+	});
+
+</script>
 
 <?php
 get_sidebar();
