@@ -5,7 +5,7 @@ $(function() {
         var newLoc = $(document).scrollTop();
         var diff = scrollLoc - newLoc;
         rotation += diff, scrollLoc = newLoc;
-        var rotationStr = "rotate(" + rotation + "deg)";
+        var rotationStr = "rotate3d(" + rotation + "deg)";
         $("#logo").css({
             "-webkit-transform": rotationStr,
             "-moz-transform": rotationStr,
