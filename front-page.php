@@ -148,9 +148,6 @@ get_header();
 
 	<section id="events">
 		<div class="left">
-			<div class="event-cover">
-				<img src="http://anicon.local/wp-content/uploads/2020/09/Event.png" alt="Event Cover">
-			</div>
 		</div>
 		<div class="right">
 			<div class="top">
