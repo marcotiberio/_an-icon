@@ -510,10 +510,10 @@ get_header();
 					</svg>
 			</div>
 			<div class="right">
-				<p>
+				<small>
 				This project has received funding from the European Research Council (ERC) under the 
 				European Union’s Horizon 2020 research and innovation programme. Grant agreement No. 834033 AN-ICON.
-				</p>
+				</small>
 			</div>
 		</div><!-- .site-info -->
 	</section><!-- #colophon -->
