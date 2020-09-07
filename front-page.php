@@ -135,7 +135,7 @@ get_header();
 		</div>
 		<div class="inside">
 			<div class="left">
-				<a href="mailto:<?php the_sub_field('email'); ?>" class="email"><?php the_sub_field('email'); ?></p></a>
+				<a href="mailto:<?php the_field('email'); ?>" class="email"><?php the_field('email'); ?></p></a>
 				<small><?php the_field('address'); ?></small>
 			</div>
 			<div class="right">
