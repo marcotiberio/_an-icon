@@ -31,7 +31,9 @@
 				Theory, and Practices of
 				Environmental Images" transform="translate(0 12)" fill="blue" font-size="16" font-family="Helvetica"><tspan x="0" y="0">An-Iconology: History,</tspan><tspan x="0" y="20">Theory, and Practices of</tspan><tspan x="0" y="40">Environmental Images</tspan></text>
 			</svg>
-			<img id="logo" src="http://r26.031.myftpupload.com/wp-content/uploads/2020/09/throbber.png" alt="">
+			<svg id="logo" width="60.55" height="58.251" viewBox="0 0 60.55 58.251">
+				<path id="Throbber" d="M810.04,611.964a4.55,4.55,0,1,1,0-6.435A4.55,4.55,0,0,1,810.04,611.964Zm.813,34.754a5.7,5.7,0,1,0-8.061,0A5.7,5.7,0,0,0,810.853,646.718Zm-25.42,7.419a6.25,6.25,0,1,0,0-8.839A6.249,6.249,0,0,0,785.433,654.137Zm-17.413-6.588a6.875,6.875,0,1,0,0-9.722A6.875,6.875,0,0,0,768.02,647.549Zm-.8-44.459a8,8,0,1,0,11.313,0A8,8,0,0,0,767.225,603.09Zm51.752,22.627a5.125,5.125,0,1,0-5.125,5.125A5.126,5.126,0,0,0,818.977,625.717Zm-45.7,0a7.425,7.425,0,1,0-7.425,7.425A7.426,7.426,0,0,0,773.277,625.717Zm20.575-24a4,4,0,1,0-4,4A4,4,0,0,0,793.852,601.717Z" transform="translate(-758.427 -597.717)" fill="blue" style="mix-blend-mode: multiply;isolation: isolate"/>
+			</svg>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
