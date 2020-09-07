@@ -193,6 +193,60 @@ get_header();
 				</p>
 			</div>
 		</div>
+		<div class="inside">
+			<div class="left">
+				<p class="name">Andrea Pinotti</p>
+				<p class="role">Principal Investigator</p>
+			</div>
+			<div class="center">
+				<img id="profilePic" src="http://anicon.local/wp-content/uploads/2020/09/Pinotti.png" alt="Pinotti">
+			</div>
+			<div class="right">
+				<p class="bio">
+					(PhD in Philosophy 1998) He is Full Professor of Aesthetics at the Department of Philosophy “Piero
+					Martinetti” of the State University of Milan, where he teaches Aesthetics and Representation and
+					Image Theories. He is the coordinator of the Doctoral Course in Philosophy and Human Sciences.
+
+					He has been fellow at the Italian Academy for Advanced Studies in America at Columbia University,
+					New York (2003-04); Directeur d’études associé at the École des hautes études en sciences sociales,
+					Paris (2008); Fritz Saxl Senior fellow at the Warburg Institute, University of London (2010);
+					professeur invité at the Université Jean-Moulin, Lyon 3 (2011); Gastwissenschaftler at the ZfL in
+					Berlin (2012); directeur d’études associé at the FMSH in Paris (2015); Eurias-Marie-Curie Senior
+					fellow at the IEA in Paris (2017-18).
+
+					He has been Directeur de Programme at the CIPH (Collège International de Philosophie) in Paris on
+					the programme Monument Nonument. Politique de l’image mémorielle, esthétique de la mémoire
+					matérielle. In 2018 he has been awarded the Wissenschaftspreis der Aby-Warburg-Stiftung.
+				</p>
+			</div>
+		</div>
+		<div class="inside">
+			<div class="left">
+				<p class="name">Andrea Pinotti</p>
+				<p class="role">Principal Investigator</p>
+			</div>
+			<div class="center">
+				<img id="profilePic" src="http://anicon.local/wp-content/uploads/2020/09/Pinotti.png" alt="Pinotti">
+			</div>
+			<div class="right">
+				<p class="bio">
+					(PhD in Philosophy 1998) He is Full Professor of Aesthetics at the Department of Philosophy “Piero
+					Martinetti” of the State University of Milan, where he teaches Aesthetics and Representation and
+					Image Theories. He is the coordinator of the Doctoral Course in Philosophy and Human Sciences.
+
+					He has been fellow at the Italian Academy for Advanced Studies in America at Columbia University,
+					New York (2003-04); Directeur d’études associé at the École des hautes études en sciences sociales,
+					Paris (2008); Fritz Saxl Senior fellow at the Warburg Institute, University of London (2010);
+					professeur invité at the Université Jean-Moulin, Lyon 3 (2011); Gastwissenschaftler at the ZfL in
+					Berlin (2012); directeur d’études associé at the FMSH in Paris (2015); Eurias-Marie-Curie Senior
+					fellow at the IEA in Paris (2017-18).
+
+					He has been Directeur de Programme at the CIPH (Collège International de Philosophie) in Paris on
+					the programme Monument Nonument. Politique de l’image mémorielle, esthétique de la mémoire
+					matérielle. In 2018 he has been awarded the Wissenschaftspreis der Aby-Warburg-Stiftung.
+				</p>
+			</div>
+		</div>
 	</section>
 
 </main><!-- #main -->
