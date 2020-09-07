@@ -996,11 +996,23 @@ textarea {
 
 /* Global */
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background: #fff;
 	width: 100vw;
 	height: 100vh;
-	padding: 1.5%;
+	padding: 0;
+}
+
+section {
+	padding: 0 1.5%;
+}
+
+.site {
+	margin-bottom: 10%;
 }
 
 a {
@@ -1021,20 +1033,40 @@ a:active {
 	text-decoration: underline;
 }
 
+.section-title p {
+	color: #0000ff;
+	text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6);
+}
+
+article .entry-header {
+	display: none;
+}
+
 /* Global */
 
 
 /* Header */
 
-
 .site-header {
+	margin: 1.5% 1.5% 5% 1.5%;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	z-index: 1000;
+}
+
+#logotype {
+	position: fixed;
+}
+
+#logo {
+	position: fixed;
+	left: 70px;
 }
 
 #primary-menu {
 	display: flex;
 	flex-direction: row;
+	position: fixed;
 }
 
 #primary-menu li {
@@ -1043,7 +1075,7 @@ a:active {
 
 /* Header */
 
-/* Footer */
+/* News Ticker */
 
 footer {
 	position: fixed;
@@ -1074,10 +1106,184 @@ footer a:active {
 	text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6);
 }
 
-/* Footer */
+*/
+/* News Ticker */
 
 
 .intro-text {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+}
+
+/* Seminars */
+
+#seminars {
+	margin-top: 5%;
+}
+
+#seminars .inside {
+	margin-top: 10px;
+	padding-top: 10px;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	column-gap: 20px;
+}
+
+#seminars .inside .left {
+	display: flex;
+	flex-direction: column;
+}
+
+#seminars .inside .left>div {
+	margin: 20px 0;
+}
+
+#seminars .inside>div {
+	border-top: 1px solid #000000;
+}
+
+#seminars .inside .right {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	column-gap: 20px;
+}
+
+#events {
+	margin-top: 5%;
+	padding: 0 !important;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	background-color: #FFD700;
+	opacity: 0.75;
+	height: 100vh;
+}
+
+#events .left {
+	background-image: url("http://r26.031.myftpupload.com/wp-content/uploads/2020/09/Event.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	opacity: 0.5;
+}
+
+#team {
+	margin-top: 5%;
+}
+
+#team .inside {
+	margin-top: 10px;
+	padding-top: 10px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 2fr;
+	column-gap: 20px;
+	border-top: 1px solid #000000;
+}
+
+#contact {
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+#contact .inside {
+	margin-top: 10px;
+	padding-top: 10px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	border-top: 1px solid #000000;
+}
+
+#contact .inside a {
+	color: #000000;
+	text-shadow: none !important;
+}
+
+#contact .inside a:visited {
+	color: #000000;
+	text-shadow: none !important;
+}
+
+#contact .inside a:hover,
+#contact .inside a:focus,
+#contact .inside a:active {
+	color: #000000;
+	text-shadow: none !important;
+	text-decoration: underline;
+}
+
+#contact .inside .address {
+	margin-top: 10px;
+	padding-top: 10px;
+}
+
+#contact .inside .form {
+	margin-top: 10px;
+	padding-top: 10px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 20px;
+	row-gap: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #000000;
+	border: 0;
+	border-bottom: 1px solid #000000;
+	border-radius: 0;
+	padding: 3px;
+	font-family: "helvetica-neue-light";
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 0;
+	border-color: 0;
+	border-radius: 0;
+	background: transparent;
+	color: #0000ff;
+	text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6);
+	line-height: 1;
+	text-align: left;
+	padding: 0;
+	font-family: "helvetica-neue-light";
+}
+
+#footer {
+	position: absolute;
+	margin-top: 5%;
+	margin-bottom: 40px;
+}
+
+#footer .inside {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+#footer .inside .right {
+	display: flex;
+	padding-bottom: 0.5rem;
+}
+
+#footer .inside .right small {
+	color: #0000ff;
+	line-height: 1rem;
+	align-self: flex-end;
 }
