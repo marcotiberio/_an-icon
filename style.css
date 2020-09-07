@@ -55,15 +55,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 
 
-
-
-@font-face {
-	font-family: 'Helvetica Neue Medium';
-	font-style: normal;
-	font-weight: normal;
-	src: local('assets/fonts/HelveticaNeueMedium.woff'), url('https://github.com/marcotiberio/_an-icon/blob/master/assets/fonts/HelveticaNeueMedium.woff') format('woff');
-}
-
 /* Normalize
 --------------------------------------------- */
 
