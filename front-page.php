@@ -135,7 +135,7 @@ get_header();
 		</div>
 		<div class="inside">
 			<div class="left">
-				<a href="mailto:<?php the_field('email'); ?>" class="email"><?php the_field('email'); ?></a>
+				<a href="mailto:an-icon@unimi.it" class="email" target="_blank">an-icon@unimi.it</a>
 				<small>
 					Università degli Studi di Milano, Dipartimento di Filosofia,
 					<br>
