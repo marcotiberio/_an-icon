@@ -136,11 +136,11 @@ get_header();
 		<div class="inside">
 			<div class="left">
 				<p><a href="mailto:an-icon@unimi.it" class="email" target="_blank">an-icon@unimi.it</a></p>
-				<small>
+				<p class="address">
 					Università degli Studi di Milano, Dipartimento di Filosofia,
 					<br>
 					Via Festa del Perdono 7, 20122, Milano, Italy
-				</small>
+				</p>
 			</div>
 			<div class="right">
 				<div class="contact-form">
