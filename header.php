@@ -31,7 +31,7 @@
 				Theory, and Practices of
 				Environmental Images" transform="translate(0 12)" fill="blue" font-size="16" font-family="Helvetica"><tspan x="0" y="0">An-Iconology: History,</tspan><tspan x="0" y="20">Theory, and Practices of</tspan><tspan x="0" y="40">Environmental Images</tspan></text>
 			</svg>
-			<img id="logo" src="http://anicon.local/wp-content/uploads/2020/09/throbber-1.png" alt="">
+			<img id="logo" src="http://r26.031.myftpupload.com/wp-content/uploads/2020/09/throbber.png" alt="">
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
