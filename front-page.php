@@ -32,7 +32,7 @@ get_header();
 		<div></div>
 		<div>
 			<p>
-				<?php the_field('text_field'); ?>
+				<?php the_field('intro_text'); ?>
 			</p>
 		</div>
 	</section>
