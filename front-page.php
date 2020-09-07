@@ -255,14 +255,12 @@ get_header();
 		</div>
 		<div class="inside">
 			<div class="left">
-				<div class="section-intro">
-					<p>an-icon(at)unimi.it</p>
-					<small>
-						Università degli Studi di Milano, Dipartimento di Filosofia,
-						<br>
-						Via Festa del Perdono 7, 20122, Milano, Italy
-					</small>
-				</div>
+				<p>an-icon(at)unimi.it</p>
+				<small>
+					Università degli Studi di Milano, Dipartimento di Filosofia,
+					<br>
+					Via Festa del Perdono 7, 20122, Milano, Italy
+				</small>
 			</div>
 			<div class="right">
 				<div class="contact-form">
