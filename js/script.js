@@ -5,7 +5,7 @@ $(function() {
         var newLoc = $(document).scrollTop();
         var diff = scrollLoc - newLoc;
         rotation += diff, scrollLoc = newLoc;
-        var rotationStr = "rotate3d(" + rotation + "deg)";
+        var rotationStr = "rotate3d(0, 0, 0, 45deg);";
         $("#logo").css({
             "-webkit-transform": rotationStr,
             "-moz-transform": rotationStr,
@@ -13,3 +13,5 @@ $(function() {
         });
     });
 })
+
+
