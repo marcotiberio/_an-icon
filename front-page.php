@@ -135,7 +135,7 @@ get_header();
 		</div>
 		<div class="inside">
 			<div class="left">
-				<a href="mailto:an-icon@unimi.it" class="email" target="_blank">an-icon@unimi.it</a>
+				<p><a href="mailto:an-icon@unimi.it" class="email" target="_blank">an-icon@unimi.it</a></p>
 				<small>
 					Università degli Studi di Milano, Dipartimento di Filosofia,
 					<br>
