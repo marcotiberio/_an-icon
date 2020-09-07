@@ -249,6 +249,29 @@ get_header();
 		</div>
 	</section>
 
+	<section id="contact">
+		<div class="section-title">
+			<p>Contact</p>
+		</div>
+		<div class="inside">
+			<div class="left">
+				<div class="section-intro">
+					<p>an-icon(at)unimi.it</p>
+					<small>
+						Università degli Studi di Milano, Dipartimento di Filosofia,
+						<br>
+						Via Festa del Perdono 7, 20122, Milano, Italy
+					</small>
+				</div>
+			</div>
+			<div class="right">
+				<div class="contact-form">
+					<?php echo do_shortcode('[hf_form slug="newsletter"]'); ?>
+				</div>
+			</div>
+		</div>
+	</section>
+
 </main><!-- #main -->
 
 <?php
