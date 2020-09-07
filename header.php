@@ -26,7 +26,7 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<svg width="173" height="56" viewBox="0 0 173 56">
+			<svg id="logotype" width="173" height="56" viewBox="0 0 173 56">
 				<text id="An-Iconology:_History_Theory_and_Practices_of_Environmental_Images" data-name="An-Iconology: History,
 				Theory, and Practices of
 				Environmental Images" transform="translate(0 12)" fill="blue" font-size="16" font-family="Helvetica"><tspan x="0" y="0">An-Iconology: History,</tspan><tspan x="0" y="20">Theory, and Practices of</tspan><tspan x="0" y="40">Environmental Images</tspan></text>
