@@ -57,7 +57,7 @@ get_header();
 				<h3 class="subsection-title">2019/2020</h3>
 				
 				<!-- Tab content -->
-				<div id="20192020" class="tabcontent" style="display: grid;">
+				<div id="20192020" class="tabcontent">
 					<?php 
 					$args = array(
 						'post_type' => 'post',
