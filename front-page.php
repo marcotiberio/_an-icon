@@ -46,43 +46,48 @@ get_header();
 				<div class="section-intro">
 					<?php the_field('seminars_intro'); ?>
 				</div>
+				<div>
+					<!-- Tab links -->
+					<div class="tab">
+						<button class="tablinks" onclick="openCity(event, '2020')">2020</button>
+						<button class="tablinks" onclick="openCity(event, '2019')">2019</button>
+					</div>
+				</div>
 			</div>
 			<div class="center">
 				<h3 class="subsection-title">2019/2020</h3>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-					labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-					laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-					voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-					non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
+				
+				<!-- Tab content -->
+				<div id="2020" class="tabcontent" style="display: grid;">
+					<?php 
+					$args = array(
+						'post_type' => 'post',
+						'post_status' => 'publish',
+						'category_name' => 'illusion',
+						'posts_per_page' => 6,
+					);
+					$arr_posts = new WP_Query( $args );
+						
+					if ( $arr_posts->have_posts() ) :
+						
+						
+						while ( $arr_posts->have_posts() ) :
+							$arr_posts->the_post();
+							?>
+							<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+								<p>data</p>
+								<a href="<?php the_permalink(); ?>"><h2>titolo</h2></a>
+								<p>autore</p>
+							</article>
+
+							<?php
+						endwhile;
+					endif; ?>
+				</div>
 			</div>
 			<div class="right">
 				<h3 class="subsection-title">Illusion</h3>
-				<p>
-					When dealing with environments that simulate reality, illusion is one of the first concepts that
-					must be tackled. Yet how is illusion to be interpreted? Is it an unconscious deception
-					accomplished through a false perception, or is it rather a lusory attitude adopted in a peculiar
-					kind of make-believe relation? What is the difference between illusion, deception, and
-					hallucination? How does illusion turn into deception? How does deception become illusion?
-
-					Despite it has been traditionally given a negative value, the word “illusion” is currently
-					accorded a more and more positive meaning as one of the most important objectives of the
-					creators and experiencers of an-icons. Should we speak of emulation when, for instance,
-					psychiatrists treat veterans and depressed elders by plunging them in alternative worlds? Is
-					simulation the aim of political communicators who manipulate images supposed to represent
-					reality? What are the challenges raised by so-called deepfakes? Is a perfect environmental
-					illusion also the ultimate objective of videogame designers?
-
-					The effect of illusion presupposes techniques that negate or dissimulate the mediateness of the
-					image, making transparent the threshold between reality and image. The deriving “environmental”
-					images presuppose the interaction with the observers; but is interactivity necessary to obtain
-					an illusion effect? Does the multisensory quality of the interaction affect the overall illusion
-					effect? And, since environmental images are frequently inhabited by the users’ proxies: do
-					avatars in their vast phenomenology enhance the illusion, or rather do they diminish the
-					resulting effect? What is the relation between illusion and the style of the image? Is
-					hyper-realism a necessary element of illusion, simulation, and immersivity?
-				</p>
+				<?php the_field('seminars_description'); ?>
 			</div>
 		</div>
 	</section>
