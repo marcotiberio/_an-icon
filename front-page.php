@@ -75,14 +75,14 @@ get_header();
 							?>
 							<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 								<p><?php the_time('j M Y') ?></p>
-								<a href="<?php the_permalink(); ?>">
+								<span><a href="<?php the_permalink(); ?>">
 									<?php
 									if ( is_singular() ) :
 										the_title( '<p class="entry-title">', '</p>' );
 									else :
 										the_title( '<p class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></p>' );
 									endif;?>
-								</a><span>autore</span>
+								</a></span><span>autore</span>
 							</article>
 
 							<?php
