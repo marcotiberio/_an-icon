@@ -1110,7 +1110,7 @@ footer a:active {
 /* News Ticker */
 
 
-.intro-text {
+#intro {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
