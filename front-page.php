@@ -109,8 +109,8 @@ get_header();
 		<div class="section-title">
 			<p>Team</p>
 		</div>
-		<?php if( have_rows('teams') ): ?>
-			<?php while( have_rows('teams') ): the_row(); 
+		<?php if( have_rows('team') ): ?>
+			<?php while( have_rows('team') ): the_row(); 
 				$name = get_sub_field('name');
 				$role = get_sub_field('role');
 				$profile_pic = get_sub_field('profile_pic');
