@@ -92,7 +92,7 @@ get_header();
 			</div>
 			<div class="right">
 				<h3 class="subsection-title">Illusion</h3>
-				<?php the_field('seminars_description'); ?>
+				<p><?php the_field('seminars_description'); ?></p>
 			</div>
 		</div>
 	</section>
