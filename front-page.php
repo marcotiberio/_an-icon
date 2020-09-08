@@ -47,11 +47,48 @@ get_header();
 					<?php the_field('seminars_intro'); ?>
 				</div>
 				<div>
-					
+					<!-- Tab links -->
+					<div class="tab">
+						<button class="tablinks" onclick="openCity(event, '20192020')">- Illusion 2019/2020</button>
+					</div>
 				</div>
 			</div>
 			<div class="center">
+				<h3 class="subsection-title">2019/2020</h3>
 				
+				<!-- Tab content -->
+				<div id="20192020" class="tabcontent">
+					<?php 
+					$args = array(
+						'post_type' => 'post',
+						'post_status' => 'publish',
+						'category_name' => 'illusion',
+						'posts_per_page' => 6,
+					);
+					$arr_posts = new WP_Query( $args );
+						
+					if ( $arr_posts->have_posts() ) :
+						
+						
+						while ( $arr_posts->have_posts() ) :
+							$arr_posts->the_post();
+							?>
+							<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+								<p><?php the_time('j M Y') ?></p>
+								<span><a href="<?php the_permalink(); ?>">
+									<?php
+									if ( is_singular() ) :
+										the_title( '<p class="entry-title">', '</p>' );
+									else :
+										the_title( '<p class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></p>' );
+									endif;?>
+								</a></span><span>autore</span>
+							</article>
+
+							<?php
+						endwhile;
+					endif; ?>
+				</div>
 			</div>
 			<div class="right">
 				<h3 class="subsection-title">Illusion</h3>
