@@ -47,10 +47,7 @@ get_header();
 					<?php the_field('seminars_intro'); ?>
 				</div>
 				<div>
-					<!-- Tab links -->
-					<div class="tab">
-						<button class="tablinks" onclick="openCity(event, '20192020')">- Illusion 2019/2020</button>
-					</div>
+					
 				</div>
 			</div>
 			<div class="center">
