@@ -1106,13 +1106,13 @@ footer a:active {
 	text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6);
 }
 
-
 /* News Ticker */
 
 
 #intro {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+	margin-top: 5%;
+	display: grid !important;
+	grid-template-columns: 1fr 1fr !important;
 }
 
 /* Seminars */
@@ -1144,7 +1144,7 @@ footer a:active {
 
 #seminars .inside .right {
 	display: grid;
-	grid-template-columns: 1fr 2fr;
+	grid-template-columns: 1fr 3.5fr;
 	column-gap: 20px;
 }
 
