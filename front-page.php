@@ -49,8 +49,7 @@ get_header();
 				<div>
 					<!-- Tab links -->
 					<div class="tab">
-						<button class="tablinks" onclick="openCity(event, '2020')">2020</button>
-						<button class="tablinks" onclick="openCity(event, '2019')">2019</button>
+						<button class="tablinks" onclick="openCity(event, '20192020')">2020</button>
 					</div>
 				</div>
 			</div>
@@ -58,7 +57,7 @@ get_header();
 				<h3 class="subsection-title">2019/2020</h3>
 				
 				<!-- Tab content -->
-				<div id="2020" class="tabcontent" style="display: grid;">
+				<div id="20192020" class="tabcontent" style="display: grid;">
 					<?php 
 					$args = array(
 						'post_type' => 'post',
@@ -412,6 +411,23 @@ get_header();
 	</section><!-- #colophon -->
 
 </main><!-- #main -->
+
+
+<script>
+	function openCity(evt, cityName) {
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+	document.getElementById(cityName).style.display = "grid";
+	evt.currentTarget.className += " active";
+	}
+</script>
 
 <?php
 get_sidebar();
