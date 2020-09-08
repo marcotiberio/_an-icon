@@ -82,8 +82,7 @@ get_header();
 									else :
 										the_title( '<p class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></p>' );
 									endif;?>
-								</a>
-								<p>autore</p>
+								</a><span>autore</span>
 							</article>
 
 							<?php
