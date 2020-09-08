@@ -49,7 +49,7 @@ get_header();
 				<div>
 					<!-- Tab links -->
 					<div class="tab">
-						<button class="tablinks" onclick="openCity(event, '20192020')">2020</button>
+						<button class="tablinks" onclick="openCity(event, '20192020')">- Illusion 2019/2020</button>
 					</div>
 				</div>
 			</div>
@@ -74,7 +74,7 @@ get_header();
 							$arr_posts->the_post();
 							?>
 							<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<p>data</p>
+								<p><?php the_time('m/j/y') ?></p>
 								<a href="<?php the_permalink(); ?>">
 									<p>
 										<?php
