@@ -27,10 +27,10 @@ $('document').ready(function() {
 	       
 
 	    	var srotatey = "rotateY(" + sl/3 + "deg)";
-	    	var srotatex = "rotateX(" + sl/2 + "deg)";
+	    	// var srotatex = "rotateX(" + sl/2 + "deg)";
 	    	var size = 100 + sl + "vw";
 
-			$("#logo").css({"-moz-transform" : srotatey + srotatex , "-webkit-transform" : srotatey + srotatex});
+			$("#logo").css({"-moz-transform" : srotatey , "-webkit-transform" : srotatey});
 
 
 
@@ -43,9 +43,9 @@ $('document').ready(function() {
 
 	   		
 	    	var srotatey = "rotateY(" + sl/3 + "deg)";
-	    	var srotatex = "rotateX(" + sl/2 + "deg)";
+	    	// var srotatex = "rotateX(" + sl/2 + "deg)";
 	    	var size = 100 + sl + "vw";
-			$("#logo").css({"-moz-transform" : srotatey + srotatex, "-webkit-transform" : srotatey + srotatex});
+			$("#logo").css({"-moz-transform" : srotatey, "-webkit-transform" : srotatey});
 
 
 
