@@ -74,7 +74,7 @@ get_header();
 							$arr_posts->the_post();
 							?>
 							<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<p><?php the_time('m/j/y') ?></p>
+								<p><?php the_time('j/M/Y') ?></p>
 								<a href="<?php the_permalink(); ?>">
 									<?php
 									if ( is_singular() ) :
