@@ -28,7 +28,7 @@ get_header();
 		?>
 
 
-	<section class="intro-text">
+	<section id="intro">
 		<div></div>
 		<div>
 			<p>
