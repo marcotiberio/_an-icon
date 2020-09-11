@@ -1021,6 +1021,7 @@ section {
 
 h1, h2, h3 {
 	font-family: 'Arial', sans-serif;
+	font-weight: 400;
 }
 
 p {
