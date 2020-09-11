@@ -1076,6 +1076,15 @@ article .entry-header {
 	column-gap: 30px;
 }
 
+header .site-branding a,
+header .site-branding a:visited,
+header .site-branding a:hover,
+header .site-branding a:focus,
+header .site-branding a:active {
+	text-shadow: none;
+	text-decoration: none;
+}
+
 #logo {
 	position: fixed;
 	left: 4vw;
