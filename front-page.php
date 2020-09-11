@@ -96,7 +96,7 @@ get_header();
 		</div>
 	</section>
 
-	<section id="events">
+	<section id="publications">
 		<div class="left"></div>
 		<div class="right">
 			<div class="top"></div>
