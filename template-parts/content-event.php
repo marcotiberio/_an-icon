@@ -10,13 +10,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1>Event</h1>
-	</header><!-- .entry-header -->
 
 	<?php anicon_post_thumbnail(); ?>
 
 	<div class="entry-content">
+		<header class="entry-header">
+			<h1>Event</h1>
+		</header><!-- .entry-header -->
 		<div class="entry-info">
 			<p><?php the_time('j M Y') ?></p>
 			<p>17:00 – 19:00</p>
