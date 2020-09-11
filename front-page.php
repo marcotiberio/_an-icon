@@ -48,7 +48,16 @@ get_header();
 				<div>
 					<!-- Tab links -->
 					<div class="tab">
-						<button class="tablinks" onclick="openCity(event, '20192020')">- Illusion 2019/2020</button>
+						<button class="tablinks" onclick="openEvent(event, '20192020')">- Illusion 2019/2020</button>
+					</div>
+					<div class="tab">
+						<button class="tablinks" onclick="openEvent(event, '20182019')">- Avatar 2018/2019</button>
+					</div>
+					<div class="tab">
+						<button class="tablinks" onclick="openEvent(event, '20162017')">- Immersion 2016/2017</button>
+					</div>
+					<div class="tab">
+						<button class="tablinks" onclick="openEvent(event, '20152016')">- Thresholds 2015/2016</button>
 					</div>
 				</div>
 			</div>
@@ -57,6 +66,105 @@ get_header();
 				
 				<!-- Tab content -->
 				<div id="20192020" class="tabcontent">
+					<?php 
+					$args = array(
+						'post_type' => 'post',
+						'post_status' => 'publish',
+						'category_name' => 'illusion',
+						'posts_per_page' => 6,
+					);
+					$arr_posts = new WP_Query( $args );
+						
+					if ( $arr_posts->have_posts() ) :
+						
+						
+						while ( $arr_posts->have_posts() ) :
+							$arr_posts->the_post();
+							?>
+							<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+								<p><?php the_time('j M Y') ?></p>
+								<span><a href="<?php the_permalink(); ?>">
+									<?php
+									if ( is_singular() ) :
+										the_title( '<p class="entry-title">', '</p>' );
+									else :
+										the_title( '<p class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></p>' );
+									endif;?>
+								</a></span><span>autore</span>
+							</article>
+
+							<?php
+						endwhile;
+					endif; ?>
+				</div>
+				<!-- Tab content -->
+				<div id="20182019" class="tabcontent">
+					<?php 
+					$args = array(
+						'post_type' => 'post',
+						'post_status' => 'publish',
+						'category_name' => 'illusion',
+						'posts_per_page' => 6,
+					);
+					$arr_posts = new WP_Query( $args );
+						
+					if ( $arr_posts->have_posts() ) :
+						
+						
+						while ( $arr_posts->have_posts() ) :
+							$arr_posts->the_post();
+							?>
+							<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+								<p><?php the_time('j M Y') ?></p>
+								<span><a href="<?php the_permalink(); ?>">
+									<?php
+									if ( is_singular() ) :
+										the_title( '<p class="entry-title">', '</p>' );
+									else :
+										the_title( '<p class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></p>' );
+									endif;?>
+								</a></span><span>autore</span>
+							</article>
+
+							<?php
+						endwhile;
+					endif; ?>
+				</div>
+				<!-- Tab content -->
+				<div id="20162017" class="tabcontent">
+					<?php 
+					$args = array(
+						'post_type' => 'post',
+						'post_status' => 'publish',
+						'category_name' => 'illusion',
+						'posts_per_page' => 6,
+					);
+					$arr_posts = new WP_Query( $args );
+						
+					if ( $arr_posts->have_posts() ) :
+						
+						
+						while ( $arr_posts->have_posts() ) :
+							$arr_posts->the_post();
+							?>
+							<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+								<p><?php the_time('j M Y') ?></p>
+								<span><a href="<?php the_permalink(); ?>">
+									<?php
+									if ( is_singular() ) :
+										the_title( '<p class="entry-title">', '</p>' );
+									else :
+										the_title( '<p class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></p>' );
+									endif;?>
+								</a></span><span>autore</span>
+							</article>
+
+							<?php
+						endwhile;
+					endif; ?>
+				</div>
+				<!-- Tab content -->
+				<div id="20152016" class="tabcontent">
 					<?php 
 					$args = array(
 						'post_type' => 'post',
@@ -410,7 +518,7 @@ get_header();
 
 
 <script>
-	function openCity(evt, cityName) {
+	function openEvent(evt, cityName) {
 	var i, tabcontent, tablinks;
 	tabcontent = document.getElementsByClassName("tabcontent");
 	for (i = 0; i < tabcontent.length; i++) {
