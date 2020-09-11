@@ -14,13 +14,16 @@
 	<?php anicon_post_thumbnail(); ?>
 
 	<div class="entry-content">
-		<header class="entry-header">
+		<header class="event-header">
 			<h1>Event</h1>
-		</header><!-- .entry-header -->
-		<div class="entry-info">
+		</header>
+		<div class="event-info">
 			<p><?php the_time('j M Y') ?></p>
 			<p>17:00 – 19:00</p>
-		</div><!-- .entry-meta -->
+		</div>
+		<div class="event-type">
+			<h1>Seminar of Philosophy of Image</h1>
+		</div>
 		<?php
 			if ( is_singular() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
