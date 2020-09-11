@@ -197,10 +197,7 @@ get_header();
 					endif; ?>
 				</div>
 			</div>
-			<div class="right">
-				<h3 class="subsection-title">Illusion</h3>
-				<p><?php the_field('seminars_description'); ?></p>
-			</div>
+			
 		</div>
 	</section>
 
