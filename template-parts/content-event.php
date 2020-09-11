@@ -9,19 +9,16 @@
 
 ?>
 
+<header class="entry-header">
+	<h1>2019/2020</h1>
+	<h1>Event</h1>
+</header>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-
 
 	<?php anicon_post_thumbnail(); ?>
 
 	<div class="entry-content">
-		<header class="entry-header">
-			<h1>Event</h1>
-			<?php the_category(', '); ?>
-
-
-		</header>
 		<div class="entry-info">
 			<p><?php the_time('j M Y') ?></p>
 			<p>17:00 – 19:00</p>
