@@ -20,23 +20,26 @@
 
 	<div class="entry-content">
 		<div class="entry-info">
-		<?php
-			$prev_post = get_previous_post();
-			$prev_id = $prev_post->ID;
-			$prev_permalink = get_permalink($prev_id);
-			$next_post = get_next_post();
-			$next_id = $next_post->ID;
-			$next_permalink = get_permalink($next_id);
+			<?php
+				$prev_post = get_previous_post();
+				$prev_id = $prev_post->ID;
+				$prev_permalink = get_permalink($prev_id);
+				$next_post = get_next_post();
+				$next_id = $next_post->ID;
+				$next_permalink = get_permalink($next_id);
 			?>
-			<p>
-			<a href="<?php echo $prev_permalink; ?>" rel="prev">
-				<span class="meta-nav"><</span>
-			</a>
-			<?php the_time('j M Y') ?></p>
-			<a href="<?php echo $next_permalink; ?>">
-				<span class="meta-nav">></span>
-			</a>
-			<p>17:00 – 19:00</p>
+			<div class="event-nav">
+				<a href="<?php echo $prev_permalink; ?>" rel="prev">
+					<span class="meta-nav"><</span>
+				</a>
+				<p><?php the_time('j M Y') ?></p>
+				<a href="<?php echo $next_permalink; ?>">
+					<span class="meta-nav">></span>
+				</a>
+			</div>
+			<div class="event-time">
+				<p>17:00 – 19:00</p>
+			</div>
 		</div>
 		<div class="event-type">
 			<h1>Seminar of Philosophy of Image</h1>
