@@ -22,6 +22,7 @@ get_header();
 			the_post_navigation(
 				array(
 					'prev_text' => '<span class="nav-subtitle">' . esc_html__( '<', 'anicon' ) . '</span>',
+					the_time('j M Y')
 					'next_text' => '<span class="nav-subtitle">' . esc_html__( '>', 'anicon' ) . '</span>',
 				)
 			);
