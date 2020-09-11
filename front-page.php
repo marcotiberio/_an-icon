@@ -80,19 +80,24 @@ get_header();
 						while ( $arr_posts->have_posts() ) :
 							$arr_posts->the_post();
 							?>
-							<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<h3 class="subsection-title">2019/2020</h3>
-								<p><?php the_time('j M Y') ?></p>
-								<span><a href="<?php the_permalink(); ?>">
-									<?php
-									if ( is_singular() ) :
-										the_title( '<p class="entry-title">', '</p>' );
-									else :
-										the_title( '<p class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></p>' );
-									endif;?>
-								</a></span><span>autore</span>
-							</article>
-
+							<div class="seminar-archive">
+								<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+									<h3 class="subsection-title">2019/2020</h3>
+									<p><?php the_time('j M Y') ?></p>
+									<span><a href="<?php the_permalink(); ?>">
+										<?php
+										if ( is_singular() ) :
+											the_title( '<p class="entry-title">', '</p>' );
+										else :
+											the_title( '<p class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></p>' );
+										endif;?>
+									</a></span><span>autore</span>
+								</article>
+							</div>
+							<div class="seminar-description">
+								<?php the_category(', '); ?>
+								<p>ciao</p>
+							</div>
 							<?php
 						endwhile;
 					endif; ?>
