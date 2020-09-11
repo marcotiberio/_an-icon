@@ -62,7 +62,6 @@ get_header();
 				</div>
 			</div>
 			<div class="center">
-				<h3 class="subsection-title">2019/2020</h3>
 				
 				<!-- Tab content -->
 				<div id="20192020" class="tabcontent" style="display: grid;">
@@ -82,6 +81,7 @@ get_header();
 							$arr_posts->the_post();
 							?>
 							<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+								<h3 class="subsection-title">2019/2020</h3>
 								<p><?php the_time('j M Y') ?></p>
 								<span><a href="<?php the_permalink(); ?>">
 									<?php
