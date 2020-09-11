@@ -1207,12 +1207,7 @@ footer a:active {
 
 #seminars .inside .center {
 	grid-column-start: 3;
-  grid-column-end: 5;
-}
-
-#seminars .inside .right {
-	grid-column-start: 5;
-  grid-column-end: 9;
+    grid-column-end: 9;
 }
 
 #seminars .inside .left > div {
