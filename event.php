@@ -17,13 +17,6 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( '<', 'anicon' ) . '</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( '>', 'anicon' ) . '</span>',
-				)
-			);
-
 			get_template_part( 'template-parts/content-event', get_post_type() );
 
 		endwhile; // End of the loop.
