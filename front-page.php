@@ -29,8 +29,7 @@ get_header();
 
 
 	<section id="intro">
-		<div></div>
-		<div>
+		<div class="intro-text">
 			<p>
 				<?php the_field('intro_text'); ?>
 			</p>
