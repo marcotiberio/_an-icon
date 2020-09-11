@@ -30,7 +30,7 @@
 
 			if ( 'post' === get_post_type() ) :
 				?>
-			<?php endif; ?>
+		<?php endif; ?>
 		<?php
 		the_content(
 			sprintf(
