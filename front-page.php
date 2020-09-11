@@ -71,7 +71,7 @@ get_header();
 						'post_type' => 'post',
 						'post_status' => 'publish',
 						'category_name' => 'illusion',
-						'posts_per_page' => 6,
+						'posts_per_page' => -1,
 					);
 					$arr_posts = new WP_Query( $args );
 						
@@ -103,8 +103,8 @@ get_header();
 					$args = array(
 						'post_type' => 'post',
 						'post_status' => 'publish',
-						'category_name' => 'illusion',
-						'posts_per_page' => 6,
+						'category_name' => 'avatar',
+						'posts_per_page' => -1,
 					);
 					$arr_posts = new WP_Query( $args );
 						
@@ -136,8 +136,8 @@ get_header();
 					$args = array(
 						'post_type' => 'post',
 						'post_status' => 'publish',
-						'category_name' => 'illusion',
-						'posts_per_page' => 6,
+						'category_name' => 'immersion',
+						'posts_per_page' => -1,
 					);
 					$arr_posts = new WP_Query( $args );
 						
@@ -169,8 +169,8 @@ get_header();
 					$args = array(
 						'post_type' => 'post',
 						'post_status' => 'publish',
-						'category_name' => 'illusion',
-						'posts_per_page' => 6,
+						'category_name' => 'thresholds',
+						'posts_per_page' => -1,
 					);
 					$arr_posts = new WP_Query( $args );
 						
