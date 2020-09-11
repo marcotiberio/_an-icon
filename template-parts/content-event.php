@@ -14,6 +14,15 @@
 	<h1>Event</h1>
 </header>
 
+<?php
+the_post_navigation(
+	array(
+		'prev_text' => '<span class="nav-subtitle">' . esc_html__( '<', 'anicon' ) . '</span>',
+		'next_text' => '<span class="nav-subtitle">' . esc_html__( '>', 'anicon' ) . '</span>',
+	)
+); 
+?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php anicon_post_thumbnail(); ?>
