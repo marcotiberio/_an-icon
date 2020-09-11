@@ -1450,7 +1450,9 @@ button:hover {
 
 .latestpost--archive {
 	display: flex;
-	flex-direction: column;
+    flex-direction: column;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 .latestpost--archive .event-info {
@@ -1484,12 +1486,13 @@ button:hover {
 
 /* Style the tab content */
 .tabcontent {
-  display: none;
-  margin-top: 2%;
-  border-top: none;
-  grid-template-columns: 1fr;
-	grid-template-rows: auto;
-	row-gap: 20px;
+  	display: none;
+  	margin-top: 2%;
+    border-top: none;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    row-gap: 20px;
+	column-gap: 30px;
 }
 
 /* MOBILE */
