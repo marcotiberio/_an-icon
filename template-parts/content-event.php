@@ -14,24 +14,23 @@
 		<div class="entry-meta">
 			<?php
 			anicon_posted_on();
-			anicon_posted_by();
 			?>
 		</div><!-- .entry-meta -->
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<?php anicon_post_thumbnail(); ?>
 
 	<div class="entry-content">
+		<?php
+			if ( is_singular() ) :
+				the_title( '<h1 class="entry-title">', '</h1>' );
+			else :
+				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			endif;
+
+			if ( 'post' === get_post_type() ) :
+				?>
+			<?php endif; ?>
 		<?php
 		the_content(
 			sprintf(
