@@ -18,10 +18,9 @@
 	<div class="entry-content">
 		<header class="entry-header">
 			<h1>Event</h1>
-			<?php 
-				$id = get_the_ID();
-				$cats = wp_get_post_categories($id);
-			?>
+			<?php the_category(', '); ?>
+
+
 		</header>
 		<div class="entry-info">
 			<p><?php the_time('j M Y') ?></p>
