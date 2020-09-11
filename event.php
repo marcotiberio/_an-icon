@@ -21,8 +21,8 @@ get_header();
 
 			the_post_navigation(
 				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( '<:', 'anicon' ) . '</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( '>:', 'anicon' ) . '</span>',
+					'prev_text' => '<span class="nav-subtitle">' . esc_html__( '<', 'anicon' ) . '</span>',
+					'next_text' => '<span class="nav-subtitle">' . esc_html__( '>', 'anicon' ) . '</span>',
 				)
 			);
 
