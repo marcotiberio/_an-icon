@@ -65,6 +65,7 @@ get_header();
 				
 				<!-- Tab content -->
 				<div id="20192020" class="tabcontent" style="display: grid;">
+					<h3 class="subsection-title">2019/2020</h3>
 					<?php 
 					$args = array(
 						'post_type' => 'post',
@@ -81,7 +82,6 @@ get_header();
 							$arr_posts->the_post();
 							?>
 							<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<h3 class="subsection-title">2019/2020</h3>
 								<p><?php the_time('j M Y') ?></p>
 								<span><a href="<?php the_permalink(); ?>">
 									<?php
@@ -98,6 +98,7 @@ get_header();
 				</div>
 				<!-- Tab content -->
 				<div id="20182019" class="tabcontent">
+					<h3 class="subsection-title">2018/2019</h3>
 					<?php 
 					$args = array(
 						'post_type' => 'post',
@@ -131,6 +132,7 @@ get_header();
 				</div>
 				<!-- Tab content -->
 				<div id="20162017" class="tabcontent">
+					<h3 class="subsection-title">2016/2027</h3>
 					<?php 
 					$args = array(
 						'post_type' => 'post',
@@ -164,6 +166,7 @@ get_header();
 				</div>
 				<!-- Tab content -->
 				<div id="20152016" class="tabcontent">
+					<h3 class="subsection-title">2015/2016</h3>
 					<?php 
 					$args = array(
 						'post_type' => 'post',
