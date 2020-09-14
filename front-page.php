@@ -17,17 +17,6 @@ get_header();
 
 <main id="primary" class="site-main">
 
-	<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-
-		endwhile; // End of the loop.
-		?>
-
-
 	<section id="intro">
 		<div class="intro-text">
 			<p>
@@ -254,7 +243,17 @@ get_header();
 	<section id="publications">
 		<div class="left"></div>
 		<div class="right">
-			<div class="top"></div>
+			<div class="top">
+				<?php
+			while ( have_posts() ) :
+				the_post();
+
+				get_template_part( 'template-parts/content', 'page' );
+
+
+			endwhile; // End of the loop.
+			?>
+			</div>
 			<div class="bottom"></div>
 		</div>
 	</section>
