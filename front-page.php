@@ -245,15 +245,14 @@ get_header();
 		<div class="right">
 			<div class="top">
 				<?php
-			while ( have_posts() ) :
-				the_post();
+					while ( have_posts() ) :
+						the_post();
 
-				get_template_part( 'template-parts/content', 'page' );
+						get_template_part( 'template-parts/content-event', get_post_type() );
 
-
-			endwhile; // End of the loop.
-			?>
-			</div>
+					endwhile; // End of the loop.
+				?>
+				</div>
 			<div class="bottom"></div>
 		</div>
 	</section>
