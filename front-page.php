@@ -163,8 +163,11 @@ get_header();
 					</div>
 
 					<div class="seminar-description">
-						<h3>Illusion</h3>
-						<p><?php the_field('seminar_description', 663); ?></p>
+						<h3>Avatar</h3>
+						<?php
+						$field = get_field_object('seminar_description', 663);
+						?>
+						<p><?php echo $field['value']; ?></p>
 					</div>
 				</div>
 
