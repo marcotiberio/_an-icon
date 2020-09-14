@@ -264,23 +264,6 @@ get_header();
 		</article>
 	</section>
 
-	<section id="publications-test-test">
-		<?php $args = array(
-     'cat' => 'illusion',
-     'posts_per_page' => 3
- );
- $the_query = new WP_Query( $args );
-
- // The Loop
- if ( $the_query->have_posts() ) {
-
-    while ( $the_query->have_posts() ) {
-
-        get_template_part( 'template-parts/content-event', 'page' );
-    }
- }
- ?>
-	</section>
 
 	<!-- <section id="publications">
 		<div class="left"></div>
