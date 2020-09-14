@@ -265,17 +265,10 @@ get_header();
 	</section>
 
 	<section id="publications-test-test">
-		<?php 
-		if ( have_posts() ) : 
-			while ( have_posts() ) : the_post(); 
-				the_title( '<h2>', '</h2>' ); 
-				the_post_thumbnail(); 
-				the_excerpt();
-			endwhile; 
-		else: 
-			_e( 'Sorry, no posts matched your criteria.', 'textdomain' ); 
-		endif; 
-		?>
+		<?php query_posts('cat=illusion'); ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<?php the_content(); ?>
+		<?php endwhile; endif; ?>
 	</section>
 
 	<!-- <section id="publications">
