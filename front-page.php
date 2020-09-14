@@ -244,21 +244,14 @@ get_header();
 		<div class="left"></div>
 		<div class="right">
 			<div class="top">
-				<?php query_posts( array(
-				'category_name' => 'illusion',
-				'posts_per_page' => 3,
-				)); ?>
+				<?php
+				while ( have_posts() ) :
+					the_post();
 
-				<?php if( have_posts() ): while ( have_posts() ) : the_post(); ?>
+					get_template_part( 'template-parts/content', 'page' );
 
-				<?php the_excerpt(); ?>
-				<?php endwhile; ?>
-
-				<?php else : ?>
-
-				<p><?php __('No News'); ?></p>
-
-				<?php endif; ?>
+				endwhile; // End of the loop.
+				?>
 			</div>
 			<div class="bottom"></div>
 		</div>
