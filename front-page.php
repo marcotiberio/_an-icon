@@ -265,10 +265,21 @@ get_header();
 	</section>
 
 	<section id="publications-test-test">
-		<?php query_posts('cat=illusion'); ?>
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<?php the_content(); ?>
-		<?php endwhile; endif; ?>
+		<?php $args = array(
+     'cat' => 'illusion',
+     'posts_per_page' => 3
+ );
+ $the_query = new WP_Query( $args );
+
+ // The Loop
+ if ( $the_query->have_posts() ) {
+
+    while ( $the_query->have_posts() ) {
+
+        // ## write your code here..
+    }
+ }
+ ?>
 	</section>
 
 	<!-- <section id="publications">
