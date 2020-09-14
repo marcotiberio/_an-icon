@@ -128,37 +128,44 @@ get_header();
 
 				<!-- Tab content -->
 				<div id="20182019" class="tabcontent">
-					<h3 class="subsection-title">2018/2019</h3>
-					<?php 
-					$args = array(
-						'post_type' => 'post',
-						'post_status' => 'publish',
-						'category_name' => 'avatar',
-						'posts_per_page' => -1,
-					);
-					$arr_posts = new WP_Query( $args );
-						
-					if ( $arr_posts->have_posts() ) :
-						
-						
-						while ( $arr_posts->have_posts() ) :
-							$arr_posts->the_post();
-							?>
-					<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<p><?php the_time('j M Y') ?></p>
-						<span><a href="<?php the_permalink(); ?>">
-								<?php
-									if ( is_singular() ) :
-										the_title( '<p class="entry-title">', '</p>' );
-									else :
-										the_title( '<p class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></p>' );
-									endif;?>
-							</a></span><span>autore</span>
-					</article>
+					<div class="post-list">
+						<h3 class="subsection-title">2018/2019</h3>
+						<?php 
+						$args = array(
+							'post_type' => 'post',
+							'post_status' => 'publish',
+							'category_name' => 'avatar',
+							'posts_per_page' => -1,
+						);
+						$arr_posts = new WP_Query( $args );
+							
+						if ( $arr_posts->have_posts() ) :
+							
+							
+							while ( $arr_posts->have_posts() ) :
+								$arr_posts->the_post();
+								?>
+						<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+							<p><?php the_time('j M Y') ?></p>
+							<span><a href="<?php the_permalink(); ?>">
+									<?php
+										if ( is_singular() ) :
+											the_title( '<p class="entry-title">', '</p>' );
+										else :
+											the_title( '<p class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></p>' );
+										endif;?>
+								</a></span><span>autore</span>
+						</article>
 
-					<?php
-						endwhile;
-					endif; ?>
+						<?php
+							endwhile;
+						endif; ?>
+					</div>
+
+					<div class="seminar-description">
+						<h3>Illusion</h3>
+						<p><?php the_field('seminar_description', 663); ?></p>
+					</div>
 				</div>
 
 				<!-- Tab content -->
