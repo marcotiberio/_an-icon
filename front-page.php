@@ -188,7 +188,7 @@ get_header();
 						<p><?php echo $description['value']; ?></p>
 					</div>
 				</div>
-
+				
 				<!-- Tab content -->
 				<div id="20152016" class="tabcontent">
 					<div class="post-list">
@@ -219,7 +219,7 @@ get_header();
 										endif;?>
 								</a></span><span>autore</span>
 						</article>
-						<?php
+					<?php
 						endwhile;
 					endif; ?>
 
@@ -245,8 +245,9 @@ get_header();
 		<div class="right">
 			<div class="top">
 				<div id="calendar">
+				<div id="calendar">
 
-					<?php
+<?php
 // Dates
 $year = date('Y');
 $first_month_this_year_ts = mktime(0, 0, 0, date("F", strtotime('first month of this year')) + 1, date('d'), date('Y')); // timestamp
@@ -279,12 +280,12 @@ function total_weeks_in_month($year, $month, $start_day_of_week)  {
 }
 ?>
 
-					<div class="calendar">
-						<div class="calendarMonthWrap">
+<div class="calendar">
+	<div class="calendarMonthWrap">
 
-							<!-- Months -->
-							<div class="calendarMonth">
-								<?php
+		<!-- Months -->
+		<div class="calendarMonth">
+			<?php
 			// Get all months of the year
 			$first_month_this_year_monthloop_ts = $first_month_this_year_ts;
 			for ($m = 1; $m <= 12; $m++) {
@@ -305,10 +306,10 @@ function total_weeks_in_month($year, $month, $start_day_of_week)  {
 				echo '<div class="month ' . $month_class . '">' . date_i18n("F", strtotime($month)) . ' <strong>' . date('Y') . '</strong>';
 				?>
 
-								<!-- Weeks -->
-								<div class="weekWrap">
-									<div class="calendarWeek">
-										<?php
+				<!-- Weeks -->
+				<div class="weekWrap">
+					<div class="calendarWeek">
+						<?php
 						// Get all weeks of the year
 						$first_day_of_month = new DateTime('first day of ' . date("F", strtotime($month)) . ' ' . date('Y'));
 						// Since the first day may not be a Monday, let's find the monday right before the first month day
@@ -486,33 +487,32 @@ function total_weeks_in_month($year, $month, $start_day_of_week)  {
 							echo '</tr>';
 							?>
 
-										<?php
+							<?php
 							// End of Week Block
 							echo '</table></div>';
 						}
 						?>
 
-									</div>
+					</div>
 
-								</div>
+				</div>
 
-								<?php
+				<?php
 				echo '</div>';
 			}
 			?>
-							</div>
-							<!-- Calendar Navigation -->
-							<div class="prev month-nav"><i class="fa fa-angle-double-left" aria-hidden="true"></i></div>
-							<div class="next month-nav"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-							</div>
-							<div class="prev week-nav"><i class="fa fa-angle-double-left" aria-hidden="true"></i></div>
-							<div class="next week-nav"><i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
+		</div>
+		<!-- Calendar Navigation -->
+		<div class="prev month-nav"><i class="fa fa-angle-double-left" aria-hidden="true"></i></div>
+		<div class="next month-nav"><i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
+		<div class="prev week-nav"><i class="fa fa-angle-double-left" aria-hidden="true"></i></div>
+		<div class="next week-nav"><i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
 
-						</div>
-					</div>
-					<!-- Title of events / placeholder -->
-					<div class="bottomtext">
-						<?php
+	</div>
+</div>
+<!-- Title of events / placeholder -->
+<div class="bottomtext">
+	<?php
 	// Placeholder Events for today
 	$placeholder_query = get_transient('custom_weekly_cal_' . date('j') . date('F') . date('Y') . '_6h');
 	if ($placeholder_query) {
@@ -522,8 +522,10 @@ function total_weeks_in_month($year, $month, $start_day_of_week)  {
 		endif; wp_reset_query(); wp_reset_postdata();
 	}
 	?>
-					</div>
+</div>
 
+</div>
+			
 				</div>
 			</div>
 			<div class="bottom"></div>
