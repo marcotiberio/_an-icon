@@ -246,11 +246,11 @@ get_header();
 										endif;?>
 								</a></span><span>autore</span>
 						</article>
-					</div>
-
 					<?php
 						endwhile;
 					endif; ?>
+
+					</div>
 
 					<div class="seminar-description">
 						<h3>Thresholds</h3>
