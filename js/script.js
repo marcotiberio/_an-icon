@@ -57,9 +57,7 @@ $('document').ready(function() {
 
 
 
-$(document).ready(function(){  
-    $("#clickme").on
-	  ("click", function(){ $("#myModal-" + $(this).attr('data-id')).modal();
-	});
-});
-
+// Go Back One Page
+function goBack() {
+    window.history.back();
+}

@@ -11,6 +11,8 @@
 get_header();
 ?>
 
+	<div class="back"><h1 onclick="goBack()">X</h1></div>
+
 	<main id="primary" class="site-main">
 
 		<?php
