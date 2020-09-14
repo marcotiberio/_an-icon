@@ -240,17 +240,6 @@ get_header();
 		</div>
 	</section>
 
-	<section id="publications-test">
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-		endwhile; // End of the loop.
-		?>
-	</section>
-
 	<section id="publications">
 		<div class="left"></div>
 		<div class="right">
