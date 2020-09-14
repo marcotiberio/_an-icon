@@ -1230,8 +1230,7 @@ footer a:active {
 	text-decoration: none;
 }
 
-#publications,
-#publications-test {
+#publications {
 	margin-top: 5%;
 	padding: 0 !important;
 	background-color: #FFD700;
@@ -1242,8 +1241,7 @@ footer a:active {
 	z-index: 1;
 }
 
-#publications .left,
-#publications-test .left {
+#publications .left {
 	background-image: url("http://r26.031.myftpupload.com/wp-content/uploads/2020/09/Event.png");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -1255,8 +1253,7 @@ footer a:active {
   
 }
 
-#publications .right,
-#publications-test .right {
+#publications .right {
 	background-color: #FFD700;
 	grid-column-start: 5;
   grid-column-end: 9;

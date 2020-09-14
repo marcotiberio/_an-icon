@@ -241,20 +241,14 @@ get_header();
 	</section>
 
 	<section id="publications-test">
-		<div class="left"></div>
-		<div class="right">
-			<div class="top">
-				<?php
-				while ( have_posts() ) :
-					the_post();
+		<?php
+		while ( have_posts() ) :
+			the_post();
 
-					get_template_part( 'template-parts/content', 'page' );
+			get_template_part( 'template-parts/content', 'page' );
 
-				endwhile; // End of the loop.
-				?>
-			</div>
-			<div class="bottom"></div>
-		</div>
+		endwhile; // End of the loop.
+		?>
 	</section>
 
 	<section id="publications">
