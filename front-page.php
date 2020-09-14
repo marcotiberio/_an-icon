@@ -244,14 +244,25 @@ get_header();
 		<div class="left"></div>
 		<div class="right">
 			<div class="top">
-				<?php
-				while ( have_posts() ) :
-					the_post();
-
-					get_template_part( 'template-parts/content', 'page' );
-
-				endwhile; // End of the loop.
-				?>
+			<div id="slider"> 
+<?php
+$carousel_cat = get_theme_mod('carousel_setting','1');
+$carousel_count = get_theme_mod('count_setting','4');
+$month = date('m');
+$year = date('Y');
+$new_query = new WP_Query( array('posts_per_page' => $carousel_count, 'meta_key' => 'wpb_post_views_count', 'orderby' => 'meta_value_num', 'order' => 'DESC')); ?>
+<?php if ( $new_query->have_posts() ) : ?>
+<?php while ( $new_query->have_posts() ) : $new_query->the_post(); ?>
+<div class="item">
+<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+<?php // the_post_thumbnail('thumbnail'); Thumbnail (150 x 150 hard cropped) If you want anyother size you can change ?>
+<h3> <?php the_title();?> </h3>
+</div>
+<?php endwhile; wp_reset_postdata(); ?>
+<?php else : ?>
+<p><?php _e( 'Sorry, No Popular Posts Found ' ); ?></p>
+<?php endif; ?>
+</div>
 			</div>
 			<div class="bottom"></div>
 		</div>
