@@ -66,6 +66,7 @@ get_header();
 				<!-- Tab content -->
 				<div id="20192020" class="tabcontent" style="display: grid;">
 					<h3 class="subsection-title">2019/2020</h3>
+					<div class="seminar-description"><p>Test</p></div>
 					<?php 
 					$args = array(
 						'post_type' => 'post',
@@ -95,7 +96,6 @@ get_header();
 							<?php
 						endwhile;
 					endif; ?>
-					<div class="seminar-description"><p>Test</p></div>
 				</div>
 				<!-- Tab content -->
 				<div id="20182019" class="tabcontent">
