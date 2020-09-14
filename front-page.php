@@ -245,7 +245,6 @@ get_header();
 				<div class="cover-event" style="background-image: url('http://r26.031.myftpupload.com/wp-content/uploads/2020/09/Event.png');
 												background-size: cover;
 												background-repeat: no-repeat;
-												background-color: #FFD700;
 												background-blend-mode: multiply;">
 				</div>
 				<div class="info-event">
