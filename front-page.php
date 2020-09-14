@@ -276,7 +276,7 @@ get_header();
 
     while ( $the_query->have_posts() ) {
 
-        // ## write your code here..
+        get_template_part( 'template-parts/content-event', 'page' );
     }
  }
  ?>
