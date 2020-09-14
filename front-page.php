@@ -240,13 +240,29 @@ get_header();
 		</div>
 	</section>
 
-	<section id="publications">
+	<section id="publications-test">
+		<div class="wrapper-event">
+				<div class="cover-event">
+					<canvas width="680" height="230"
+							style="width: 680px; height: 230px;"
+							data-src="http://r26.031.myftpupload.com/wp-content/uploads/2020/09/Event.png">
+					</canvas>
+				</div>
+				<div class="info-event">
+					<h3>Test Title</h3>
+					<p>Test Text</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- <section id="publications">
 		<div class="left"></div>
 		<div class="right">
 			<div class="top"></div>
 			<div class="bottom"></div>
 		</div>
-	</section>
+	</section> -->
 
 	<section id="team">
 		<div class="section-title">
