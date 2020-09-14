@@ -253,11 +253,12 @@ get_header();
 					</div>
 
 					<div class="seminar-description">
-						<h3>Thresholds</h3>
 						<?php
-						$field = get_field_object('seminar_description', 665);
+						$title = get_field_object('seminar_title', 665);
+						$description = get_field_object('seminar_description', 665);
 						?>
-						<p><?php echo $field['value']; ?></p>
+						<h3><?php echo $title['value']; ?></h3>
+						<p><?php echo $description['value']; ?></p>
 					</div>
 
 				</div>
