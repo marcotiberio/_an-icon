@@ -97,32 +97,14 @@ get_header();
 							endwhile;
 						endif; ?>
 					</div>
+
 					<div class="seminar-description">
-						<h3>Illusion</h3>
-						<p>When dealing with environments that simulate reality, illusion is one of the first concepts
-							that must be tackled. Yet how is illusion to be interpreted? Is it an unconscious deception
-							accomplished through a false perception, or is it rather a lusory attitude adopted in a
-							peculiar kind of make-believe relation? What is the difference between illusion, deception,
-							and hallucination? How does illusion turn into deception? How does deception become
-							illusion?
-
-							Despite it has been traditionally given a negative value, the word “illusion” is currently
-							accorded a more and more positive meaning as one of the most important objectives of the
-							creators and experiencers of an-icons. Should we speak of emulation when, for instance,
-							psychiatrists treat veterans and depressed elders by plunging them in alternative worlds? Is
-							simulation the aim of political communicators who manipulate images supposed to represent
-							reality? What are the challenges raised by so-called deepfakes? Is a perfect environmental
-							illusion also the ultimate objective of videogame designers?
-
-							The effect of illusion presupposes techniques that negate or dissimulate the mediateness of
-							the image, making transparent the threshold between reality and image. The deriving
-							“environmental” images presuppose the interaction with the observers; but is interactivity
-							necessary to obtain an illusion effect? Does the multisensory quality of the interaction
-							affect the overall illusion effect? And, since environmental images are frequently inhabited
-							by the users’ proxies: do avatars in their vast phenomenology enhance the illusion, or
-							rather do they diminish the resulting effect? What is the relation between illusion and the
-							style of the image? Is hyper-realism a necessary element of illusion, simulation, and
-							immersivity?</p>
+						<?php
+						$title = get_field_object('seminar_title', 660);
+						$description = get_field_object('seminar_description', 660);
+						?>
+						<h3><?php echo $title['value']; ?></h3>
+						<p><?php echo $description['value']; ?></p>
 					</div>
 				</div>
 
@@ -163,11 +145,12 @@ get_header();
 					</div>
 
 					<div class="seminar-description">
-						<h3>Avatar</h3>
 						<?php
-						$field = get_field_object('seminar_description', 663);
+						$title = get_field_object('seminar_title', 663);
+						$description = get_field_object('seminar_description', 663);
 						?>
-						<p><?php echo $field['value']; ?></p>
+						<h3><?php echo $title['value']; ?></h3>
+						<p><?php echo $description['value']; ?></p>
 					</div>
 				</div>
 
@@ -208,11 +191,12 @@ get_header();
 					</div>
 
 					<div class="seminar-description">
-						<h3>Immersion</h3>
 						<?php
-						$field = get_field_object('seminar_description', 664);
+						$title = get_field_object('seminar_title', 664);
+						$description = get_field_object('seminar_description', 664);
 						?>
-						<p><?php echo $field['value']; ?></p>
+						<h3><?php echo $title['value']; ?></h3>
+						<p><?php echo $description['value']; ?></p>
 					</div>
 				</div>
 				
