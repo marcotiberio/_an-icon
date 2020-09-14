@@ -95,6 +95,7 @@ get_header();
 							<?php
 						endwhile;
 					endif; ?>
+					<div class="seminar-description"><p>Test</p></div>
 				</div>
 				<!-- Tab content -->
 				<div id="20182019" class="tabcontent">
