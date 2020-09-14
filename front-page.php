@@ -83,7 +83,7 @@ get_header();
 							?>
 							<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 								<p><?php the_time('j M Y') ?></p>
-								<span><a href="<?php the_permalink(); ?>">
+								<span><a href="#myModal-<? the_ID(); ?>" data-toggle="modal" id="clickme">
 									<?php
 									if ( is_singular() ) :
 										the_title( '<p class="entry-title">', '</p>' );
@@ -206,67 +206,7 @@ get_header();
 	<section id="publications">
 		<div class="left"></div>
 		<div class="right">
-			<div class="top">
-			<div class="entry-content">
-		<div class="entry-info">
-			<?php
-				$prev_post = get_previous_post();
-				$prev_id = $prev_post->ID;
-				$prev_permalink = get_permalink($prev_id);
-				$next_post = get_next_post();
-				$next_id = $next_post->ID;
-				$next_permalink = get_permalink($next_id);
-			?>
-			<div class="event-nav">
-				<a href="<?php echo $prev_permalink; ?>" rel="prev">
-					<span class="meta-nav"><</span>
-				</a>
-				<p><?php the_time('j M Y') ?></p>
-				<a href="<?php echo $next_permalink; ?>">
-					<span class="meta-nav">></span>
-				</a>
-			</div>
-			<div class="event-time">
-				<p>17:00 – 19:00</p>
-			</div>
-		</div>
-		<div class="event-type">
-			<h1>Seminar of Philosophy of Image</h1>
-		</div>
-		<?php
-			if ( is_singular() ) :
-				the_title( '<h1 class="entry-title">', '</h1>' );
-			else :
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-			endif;
-
-			if ( 'post' === get_post_type() ) :
-				?>
-		<?php endif; ?>
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'anicon' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'anicon' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content --></div>
+			<div class="top"></div>
 			<div class="bottom"></div>
 		</div>
 	</section>
