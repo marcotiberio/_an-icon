@@ -244,10 +244,7 @@ get_header();
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="wrapper-event">
 					<div class="cover-event" 
-						style="background-image: url('<?php anicon_post_thumbnail(); ?>');
-						background-size: cover;
-						background-repeat: no-repeat;
-						background-blend-mode: multiply;">
+						style="background-image: url('<?php anicon_post_thumbnail(); ?>');">
 					</div>
 					<div class="info-event">
 					<?php
