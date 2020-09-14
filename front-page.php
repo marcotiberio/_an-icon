@@ -83,7 +83,7 @@ get_header();
 							?>
 							<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 								<p><?php the_time('j M Y') ?></p>
-								<span><a href="#myModal-<? the_ID(); ?>" data-toggle="modal" id="clickme">
+								<span><a href="<?php the_permalink(); ?>">
 									<?php
 									if ( is_singular() ) :
 										the_title( '<p class="entry-title">', '</p>' );

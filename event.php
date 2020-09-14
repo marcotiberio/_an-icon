@@ -11,10 +11,6 @@
 get_header();
 ?>
 
-<div id="myModal-<? the_ID(); ?>" class="modal hide fade" 
- tabindex="-1" role="dialog" aria-labelledby="myModalLabel" 
-  aria-hidden="true">
-
 	<main id="primary" class="site-main">
 
 		<?php
@@ -27,8 +23,6 @@ get_header();
 		?>
 
 	</main><!-- #main -->
-
-</div>
 
 <?php
 get_sidebar();
