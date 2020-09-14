@@ -244,7 +244,7 @@ get_header();
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="wrapper-event">
 					<div class="cover-event" 
-						style="background-image: url('<?php anicon_post_thumbnail(); ?>');">
+					style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
 					</div>
 					<div class="info-event">
 					<?php
