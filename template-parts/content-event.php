@@ -18,6 +18,8 @@
 
 	<div class="archive">
 
+	<?php
+	get_sidebar(); ?>
 		
 	</div>
 
