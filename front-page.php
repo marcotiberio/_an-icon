@@ -98,7 +98,7 @@ get_header();
 						endif; ?>
 					</div>
 					<div class="seminar-description">
-						<h3><?php the_category(', '); ?></h3>
+						<h3>Illusion</h3>
 						<p>When dealing with environments that simulate reality, illusion is one of the first concepts
 							that must be tackled. Yet how is illusion to be interpreted? Is it an unconscious deception
 							accomplished through a false perception, or is it rather a lusory attitude adopted in a
