@@ -241,18 +241,30 @@ get_header();
 	</section>
 
 	<section id="publications-test">
-		<div class="wrapper-event">
-				<div class="cover-event" style="background-image: url('http://r26.031.myftpupload.com/wp-content/uploads/2020/09/Event.png');
-												background-size: cover;
-												background-repeat: no-repeat;
-												background-blend-mode: multiply;">
-				</div>
-				<div class="info-event">
-					<h3>Test Title</h3>
-					<p>Test Text</p>
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<div class="wrapper-event">
+					<div class="cover-event" 
+						style="background-image: url('<?php anicon_post_thumbnail(); ?>');
+						background-size: cover;
+						background-repeat: no-repeat;
+						background-blend-mode: multiply;">
+					</div>
+					<div class="info-event">
+					<?php
+						if ( is_singular() ) :
+							the_title( '<h1 class="entry-title">', '</h1>' );
+						else :
+							the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+						endif;
+
+						if ( 'post' === get_post_type() ) :
+							?>
+					<?php endif; ?>
+						<p>Test Text</p>
+					</div>
 				</div>
 			</div>
-		</div>
+		</article>
 	</section>
 
 	<!-- <section id="publications">
