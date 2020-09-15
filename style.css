@@ -1012,7 +1012,7 @@ body {
 }
 
 section {
-	padding: 0 1%;
+	padding: 85px 1%;
 }
 
 .site {
@@ -1153,7 +1153,7 @@ footer a:active {
 
 
 #intro {
-	margin-top: 5%;
+	/* margin-top: 5%; */
 	display: grid !important;
 	grid-template-columns: repeat(8, 1fr) !important;
 	column-gap: 30px;
@@ -1171,7 +1171,7 @@ footer a:active {
 /* Seminars */
 
 #seminars {
-	margin-top: 5%;
+	/* margin-top: 5%; */
 }
 
 #seminars a {
@@ -1235,7 +1235,7 @@ footer a:active {
 /* Events */
 
 #events {
-	margin-top: 5%;
+	/* margin-top: 5%; */
 	padding: 0 !important;
 	background-color: #FFD700;
 	display: grid;
@@ -1266,7 +1266,7 @@ footer a:active {
 /* Publications */
 
 #publications {
-	margin-top: 5%;
+	/* margin-top: 5%; */
 }
 
 #publications a {
@@ -1330,7 +1330,7 @@ footer a:active {
 /* Team */
 
 #team {
-	margin-top: 5%;
+	/* margin-top: 5%; */
 }
 
 #team .inside {
@@ -1362,7 +1362,7 @@ footer a:active {
 /* Contact */
 
 #contact {
-	margin-top: 5%;
+	/* margin-top: 5%; */
 	margin-bottom: 5%;
 }
 
