@@ -1012,7 +1012,7 @@ body {
 }
 
 section {
-	padding: 85px 1%;
+	/* padding: 85px 1%; */
 }
 
 .site {
@@ -1172,6 +1172,7 @@ footer a:active {
 /* Seminars */
 
 #seminars {
+	scroll-margin-top: 85px;
 	/* margin-top: 5%; */
 }
 
