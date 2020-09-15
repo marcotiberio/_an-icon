@@ -1237,6 +1237,7 @@ footer a:active {
 
 #events {
 	/* margin-top: 5%; */
+	padding: 85px 1% 0 1%;
 	background-color: #FFD700;
 	display: grid;
 	grid-template-columns: repeat(8, 1fr);
