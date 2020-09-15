@@ -1232,6 +1232,8 @@ footer a:active {
 	text-decoration: none;
 }
 
+/* Events */
+
 #events {
 	margin-top: 5%;
 	padding: 0 !important;
@@ -1260,6 +1262,72 @@ footer a:active {
 	grid-column-start: 5;
 	grid-column-end: 9;
 }
+
+/* Publications */
+
+#publications {
+	margin-top: 5%;
+}
+
+#publications a {
+	color: #000000;
+	text-shadow: 0px 0px 3px rgba(0, 0, 255, 0.6);
+	font-family: 'Arial', sans-serif;
+}
+
+#publications a:visited {
+	color: #000000;
+	text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6);
+}
+
+#publications a:hover,
+#publications a:focus,
+#publications a:active {
+	color: #000000;
+	text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6);
+}
+
+#publications .inside {
+	margin-top: 10px;
+	padding-top: 10px;
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	column-gap: 30px;
+}
+
+#publications .inside .left {
+	display: flex;
+	flex-direction: column;
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+#publications .inside .center {
+	grid-column-start: 3;
+	grid-column-end: 9;
+}
+
+#publications .inside .left>div {
+	margin: 20px 0;
+}
+
+#publications .inside>div {
+	border-top: 1px solid #000000;
+}
+
+#publications .entry-title {
+	font-size: 16px;
+	line-height: 20px;
+	text-transform: uppercase;
+	color: #000000;
+	text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6);
+}
+
+#publications .entry-title:hover {
+	text-decoration: none;
+}
+
+/* Team */
 
 #team {
 	margin-top: 5%;
@@ -1291,6 +1359,7 @@ footer a:active {
 	grid-column-end: 9;
 }
 
+/* Contact */
 
 #contact {
 	margin-top: 5%;
