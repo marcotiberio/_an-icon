@@ -1153,6 +1153,7 @@ footer a:active {
 
 
 #intro {
+	padding: 0 1%;
 	/* margin-top: 5%; */
 	display: grid !important;
 	grid-template-columns: repeat(8, 1fr) !important;
