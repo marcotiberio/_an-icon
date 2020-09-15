@@ -240,7 +240,7 @@ get_header();
 		</div>
 	</section>
 
-	<section id="publications-test">
+	<section id="events-test">
 		<?php
 			while ( have_posts() ) :
 				the_post();
@@ -251,14 +251,27 @@ get_header();
 			?>
 	</section>
 
-
-	<!-- <section id="publications">
+	<section id="events">
 		<div class="left"></div>
 		<div class="right">
 			<div class="top"></div>
 			<div class="bottom"></div>
 		</div>
-	</section> -->
+	</section>
+
+	<section id="publications">
+		<div class="section-title">
+			<p>Publications</p>
+		</div>
+		<div class="inside">
+			<div class="left">
+				<div class="section-intro">
+					<?php the_field('publications_intro'); ?>
+				</div>
+			</div>
+			<div class="center"></div>
+		</div>
+	</section>
 
 	<section id="team">
 		<div class="section-title">
