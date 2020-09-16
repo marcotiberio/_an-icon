@@ -262,7 +262,7 @@ get_header();
 		<div class="inside">
 			<div class="left">
 				<div class="section-intro">
-					<?php the_field('publications_intro'); ?>
+					<?php the_field('publications_intro', 14); ?>
 				</div>
 			</div>
 			<div class="center"></div>
