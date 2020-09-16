@@ -242,7 +242,9 @@ get_header();
 
 	<section id="events-test">
 		<div class="inside">
-		
+		<?php
+		get_sidebar( 'custom' );
+		?>
 		</div>
 	</section>
 
@@ -992,5 +994,4 @@ get_header();
 </script>
 
 <?php
-get_sidebar( 'sidebar-2' );
 get_footer();

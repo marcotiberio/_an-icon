@@ -137,7 +137,7 @@ function anicon_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Custom Sidebar', 'anicon' ),
-			'id'            => 'sidebar-2',
+			'id'            => 'custom',
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',

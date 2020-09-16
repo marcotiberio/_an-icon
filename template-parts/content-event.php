@@ -19,7 +19,7 @@
 	<div class="archive">
 
 	<?php
-	get_sidebar('sidebar-2'); ?>
+	get_sidebar('sidebar-1'); ?>
 		
 	</div>
 
