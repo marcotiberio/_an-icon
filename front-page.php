@@ -248,9 +248,9 @@ get_header();
 	<section id="events">
 		<div class="left"></div>
 		<div class="right">
-			<div id="customSidebar" class="sidebar">
-				<?php echo do_shortcode('[hf_form slug="newsletter"]'); ?>
-			</div>
+		<div id="customSidebar" class="sidebar">
+			<?php dynamic_sidebar( 'custom-sidebar' ); ?>
+		</div>
 		</div>
 	</section>
 
