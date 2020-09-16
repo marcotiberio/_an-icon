@@ -242,43 +242,10 @@ get_header();
 	<section id="events">
 		<?php if( have_rows('slides') ): ?>
 		<ul class="slides">
-		<?php while( have_rows('slides') ): the_row(); ?>
+		<?php while( have_rows('slides') ): the_row();?>
 			<li>
-				<!-- Latest Events -->
-
-				<?php 
-					$args = array(
-						'post_type' => 'post',
-						'post_status' => 'publish',
-						'posts_per_page' => 1,
-					);
-					$arr_posts = new WP_Query( $args );
-					
-					if ( $arr_posts->have_posts() ) :
-						
-					
-						while ( $arr_posts->have_posts() ) :
-							$arr_posts->the_post();
-							?>
-							<article class="latestpost--custom" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<div class="event-cover">
-									<?php
-									if ( has_post_thumbnail() ) :
-										the_post_thumbnail( 'full' );
-									endif;
-									?>
-								</div>
-								<div class="event-header">
-									<a href="<?php the_permalink(); ?>"><h2>Test</h2></a>
-								</div>
-							</article>
-
-							<?php
-						endwhile;
-					endif; ?>
-				
-
-				</main><!-- #main -->
+				<?php echo wp_get_attachment_image( $image, 'full' ); ?>
+				<p><?php the_sub_field('caption'); ?></p>
 			</li>
 		<?php endwhile; ?>
 		</ul>
