@@ -240,18 +240,15 @@ get_header();
 		</div>
 	</section>
 
-	<section id="events-test">
-		<div class="inside">
-		
-	</section>
-
 	<section id="events">
-		<div class="left"></div>
-		<div class="right">
-			<div id="customSidebar" class="sidebar">
-				<?php dynamic_sidebar( 'custom-sidebar' ); ?>
-			</div>
-		</div>
+		<?php
+			while ( have_posts() ) :
+				the_post();
+
+				get_template_part( 'template-parts/content', 'page' );
+
+			endwhile; // End of the loop.
+		?>
 	</section>
 
 	<section id="publications">
