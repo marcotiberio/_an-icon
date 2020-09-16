@@ -34,7 +34,8 @@ get_header();
 				<div class="section-intro">
 					<?php the_field('seminars_intro'); ?>
 				</div>
-				<div> <!-- Tab links -->
+				<div>
+					<!-- Tab links -->
 					<div class="tab">
 						<button class="tablinks" onclick="openEvent(event, '20192020')">- Illusion 2019/2020</button>
 					</div>
@@ -187,7 +188,7 @@ get_header();
 						<p><?php echo $description['value']; ?></p>
 					</div>
 				</div>
-				
+
 				<!-- Tab content -->
 				<div id="20152016" class="tabcontent">
 					<div class="post-list">
@@ -218,7 +219,7 @@ get_header();
 										endif;?>
 								</a></span><span>autore</span>
 						</article>
-					<?php
+						<?php
 						endwhile;
 					endif; ?>
 
@@ -240,7 +241,64 @@ get_header();
 	</section>
 
 	<section id="events">
-		
+		<div id="calendar">
+			<div class="calendar-content">
+				<div class="calendar-body">
+					<ul class="calendar-days-body">
+						<li class="hide weekday-1"><a>26</a></li>
+						<li class="active hide weekday-2"><a>27</a></li>
+						<li class="hide weekday-3"><a>28</a></li>
+						<li class="active hide weekday-4"><a>29</a></li>
+						<li class="active hide weekday-5"><a>30</a></li>
+						<li class="active hide weekday-6"><a>31</a></li>
+						<li class="active weekday-0 current"><a>01</a></li>
+						<li class="weekday-1"><a>02</a></li>
+						<li class="active weekday-2"><a>03</a></li>
+						<li class="active weekday-3"><a>04</a></li>
+						<li class="active weekday-4"><a>05</a></li>
+						<li class="active weekday-5"><a>06</a></li>
+						<li class="active weekday-6"><a>07</a></li>
+						<li class="active weekday-0"><a>08</a></li>
+						<li class="weekday-1"><a>09</a></li>
+						<li class="active weekday-2"><a>10</a></li>
+						<li class="active weekday-3"><a>11</a></li>
+						<li class="active weekday-4"><a>12</a></li>
+						<li class="active weekday-5"><a>13</a></li>
+						<li class="weekday-6"><a>14</a></li>
+						<li class="weekday-0"><a>15</a></li>
+						<li class="weekday-1"><a>16</a></li>
+						<li class="active weekday-2"><a>17</a></li>
+						<li class="active weekday-3"><a>18</a></li>
+						<li class="active weekday-4"><a>19</a></li>
+						<li class="active weekday-5"><a>20</a></li>
+						<li class="active weekday-6"><a>21</a></li>
+						<li class="active weekday-0"><a>22</a></li>
+						<li class="weekday-1"><a>23</a></li>
+						<li class="active weekday-2"><a>24</a></li>
+						<li class="weekday-3"><a>25</a></li>
+						<li class="active weekday-4"><a>26</a></li>
+						<li class="active weekday-5"><a>27</a></li>
+						<li class="active weekday-6"><a>28</a></li>
+						<li class="active weekday-0"><a>29</a></li>
+						<li class="weekday-1"><a>30</a></li>
+						<li class="active hide weekday-2"><a>01</a></li>
+						<li class="hide weekday-3"><a>02</a></li>
+						<li class="hide weekday-4"><a>03</a></li>
+						<li class="hide weekday-5"><a>04</a></li>
+						<li class="hide weekday-6"><a>05</a></li>
+						<li class="hide weekday-0"><a>06</a></li>
+					</ul>
+				</div>
+				<div class="calendar-header">
+					<ul class="calendar-control">
+						<li><a class="prev-month">⮜</a></li>
+						<li class="cols-5"><span>Nov 2020</span></li>
+						<li><a class="next-month">⮞</a></li>
+					</ul>
+				</div>
+				<div class="calendar-footer"></div>
+			</div>
+		</div>
 	</section>
 
 	<section id="publications">
