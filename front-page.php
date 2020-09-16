@@ -248,11 +248,8 @@ get_header();
 	<section id="events">
 		<div class="left"></div>
 		<div class="right">
-			<div class="top"></div>
-			<div class="bottom">
-				<div id="customSidebar" class="sidebar">
-					<?php dynamic_sidebar( 'custom-sidebar' ); ?>
-				</div>
+			<div id="customSidebar" class="sidebar">
+				<?php dynamic_sidebar( 'custom-sidebar' ); ?>
 			</div>
 		</div>
 	</section>
