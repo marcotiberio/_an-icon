@@ -14,7 +14,7 @@
 	<h1>Event</h1>
 </header>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" style="background-color:<?php the_field('color'); ?>" <?php post_class(); ?>>
 
 	<div class="archive">
 
