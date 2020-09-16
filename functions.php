@@ -137,7 +137,8 @@ function anicon_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Custom Sidebar', 'anicon' ),
-			'id'            => 'custom',
+			'id'            => 'custom-sidebar',
+			'description'   => esc_html__( 'Add calendar here.', 'anicon' ),
 			'before_widget' => '<section id="calendar" class="widget-calendar">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',

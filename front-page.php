@@ -243,8 +243,8 @@ get_header();
 	<section id="events-test">
 		<div class="inside">
 		<?php
-		get_sidebar( 'custom' );
-		?>
+		if ( !function_exists('customsidebar') || !customsidebar('custom-sidebar') ) :
+		endif; ?>
 		</div>
 	</section>
 
