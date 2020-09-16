@@ -138,7 +138,7 @@ function anicon_widgets_init() {
 		array(
 			'name'          => esc_html__( 'Custom Sidebar', 'anicon' ),
 			'id'            => 'custom',
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'before_widget' => '<section id="calendar" class="widget-calendar">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
