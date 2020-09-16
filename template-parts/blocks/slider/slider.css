@@ -1,0 +1,31 @@
+.slider {
+    padding: 0 0 5px;
+    margin-top: 30px;
+}
+
+.slides img {
+    height: 80vh;
+    width: auto;
+    padding: 0 1vh !important;
+}
+
+.slick-dots {
+    display: none !important;
+    bottom: -20px !important;
+}
+
+.slick-initialized .slick-slide {
+    outline: none;
+    border: none;
+}
+
+
+@media (max-width: 900px) {
+
+    .slides img {
+        height: 40vh;
+        width: auto;
+        padding: 0 1vh !important;
+    }
+
+}
