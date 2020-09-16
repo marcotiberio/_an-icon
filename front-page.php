@@ -248,9 +248,7 @@ get_header();
 	<section id="events">
 		<div class="left"></div>
 		<div class="right">
-			<div id="customSidebar" class="sidebar">
-				<?php dynamic_sidebar( 'custom-sidebar' ); ?>
-			</div>
+			<?php echo do_shortcode('[tribe_mini_calendar]'); ?>
 		</div>
 	</section>
 
