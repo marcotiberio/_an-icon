@@ -241,14 +241,9 @@ get_header();
 	</section>
 
 	<section id="events-test">
-		<?php
-			while ( have_posts() ) :
-				the_post();
-
-				get_template_part( 'template-parts/content', 'page' );
-
-			endwhile; // End of the loop.
-			?>
+		<div class="inside">
+		
+		</div>
 	</section>
 
 	<section id="events">
@@ -997,4 +992,5 @@ get_header();
 </script>
 
 <?php
+get_sidebar( 'sidebar-2' );
 get_footer();
