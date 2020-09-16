@@ -241,7 +241,9 @@ get_header();
 	</section>
 
 	<section id="events">
-		
+		<div id="customSidebar" class="sidebar">
+			<?php dynamic_sidebar( 'custom-sidebar' ); ?>
+		</div>
 	</section>
 
 	<section id="publications">
