@@ -248,7 +248,9 @@ get_header();
 	<section id="events">
 		<div class="left"></div>
 		<div class="right">
-			<?php echo do_shortcode('[tribe_mini_calendar]'); ?>
+			<div id="customSidebar" class="sidebar">
+				<?php echo do_shortcode('[hf_form slug="newsletter"]'); ?>
+			</div>
 		</div>
 	</section>
 
