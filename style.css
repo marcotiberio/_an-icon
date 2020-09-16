@@ -1014,6 +1014,8 @@ body {
 section {
 	scroll-margin-top: 85px;
 	margin-top: 5%;
+	padding-left: 1%;
+	padding-right: 1%;
 }
 
 .site {
@@ -1473,7 +1475,7 @@ input[type="submit"] {
 	font-size: 24px;
 	line-height: 30px;
 	cursor: pointer;
-}
+}secti
 
 button:hover {}
 
