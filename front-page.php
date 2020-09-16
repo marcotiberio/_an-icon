@@ -291,9 +291,9 @@ get_header();
 				</div>
 				<div class="calendar-header">
 					<ul class="calendar-control">
-						<li><a class="prev-month">⮜</a></li>
+						<li><a class="prev-month"><</a></li>
 						<li class="cols-5"><span>Nov 2020</span></li>
-						<li><a class="next-month">⮞</a></li>
+						<li><a class="next-month">></a></li>
 					</ul>
 				</div>
 				<div class="calendar-footer"></div>
