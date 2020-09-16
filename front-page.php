@@ -241,6 +241,9 @@ get_header();
 	</section>
 
 	<section id="events">
+		<div>
+			<img src="http://r26.031.myftpupload.com/wp-content/uploads/2020/09/Event.png" alt="">
+		</div>
 		<div id="customSidebar" class="sidebar">
 			<?php dynamic_sidebar( 'custom-sidebar' ); ?>
 		</div>
