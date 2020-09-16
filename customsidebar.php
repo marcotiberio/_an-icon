@@ -13,5 +13,5 @@ if ( ! is_active_sidebar( 'custom-sidebar' ) ) {
 ?>
 
 <aside id="secondary" class="widget-area">
-	<p>Test</p>
+	
 </aside><!-- #secondary -->
