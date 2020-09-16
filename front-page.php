@@ -240,15 +240,7 @@ get_header();
 	</section>
 
 	<section id="events">
-		<?php if( have_rows('slides') ): ?>
-		<ul class="slides">
-		<?php while( have_rows('slides') ): the_row();?>
-			<li>
-				<?php echo wp_get_attachment_image( $image, 'full' ); ?>
-				<p><?php the_sub_field('caption'); ?></p>
-			</li>
-		<?php endwhile; ?>
-		</ul>
+		
 	</section>
 
 	<section id="publications">
