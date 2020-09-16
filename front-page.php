@@ -251,6 +251,7 @@ get_header();
 			<div id="customSidebar" class="sidebar">
 				<?php dynamic_sidebar( 'custom-sidebar' ); ?>
 			</div>
+			<?php echo do_shortcode('[tribe_event_inline]'); ?>
 		</div>
 	</section>
 
