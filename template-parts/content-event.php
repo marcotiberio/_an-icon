@@ -23,7 +23,9 @@
 		
 	</div>
 
-	<?php anicon_post_thumbnail(); ?>
+	<div class="event-thumbnail" style="background-image: url('http://r26.031.myftpupload.com/wp-content/uploads/2020/09/Event.png');">
+		
+	</div>
 
 	<div class="entry-content">
 		<div class="entry-info">
