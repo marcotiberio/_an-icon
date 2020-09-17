@@ -49,32 +49,7 @@ get_header(); ?>
 				<?php the_content(); ?>
 			</div><!-- .entry-content -->
 
-			<footer class="entry-meta">
-			<?php
-			//Events have their own 'event-category' taxonomy. Get list of categories this event is in.
-			$categories_list = get_the_term_list( get_the_ID(), 'event-category', '', ', ','' );
-
-			if ( '' != $categories_list ) {
-				$utility_text = __( 'This event was posted in %1$s by <a href="%3$s">%2$s</a>.', 'eventorganiser' );
-			} else {
-				$utility_text = __( 'This event was posted by <a href="%3$s">%2$s</a>.', 'eventorganiser' );
-			}
-			printf($utility_text,
-				$categories_list,
-				get_the_author(),
-				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )
-			);
-			?>
-
-			<?php edit_post_link( __( 'Edit' ), '<span class="edit-link">', '</span>' ); ?>
-			</footer><!-- .entry-meta -->
-
-			</article><!-- #post-<?php the_ID(); ?> -->
-
-			<!-- If comments are enabled, show them -->
-			<div class="comments-template">
-				<?php comments_template(); ?>
-			</div>				
+			</article><!-- #post-<?php the_ID(); ?> -->			
 
 		<?php endwhile; // end of the loop. ?>
 
