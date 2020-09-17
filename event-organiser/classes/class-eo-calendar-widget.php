@@ -277,7 +277,7 @@ class EO_Calendar_Widget extends WP_Widget {
 
 		$before = "<table id='wp-calendar'>";
 
-		$title = sprintf( '<caption> %s </caption>', esc_html( eo_format_datetime( $month, 'F' ) ) );
+		$title = sprintf( '<caption> %s </caption>', esc_html( eo_format_datetime( $month, 'M' ) ) );
 
 		$head = '<thead><tr>';
 		for ( $d = 0; $d <= 6; $d++ ) :
