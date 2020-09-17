@@ -37,6 +37,7 @@ get_header(); ?>
 			<header class="entry-header">
 
 				<!-- Display event title -->
+				<h1 class="entry-title"><?php the_title(); ?></h1>
 
 			</header><!-- .entry-header -->
 	
