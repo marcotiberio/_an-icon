@@ -996,7 +996,9 @@ textarea {
 /* CUSTOM STYLES */
 /* CUSTOM STYLES */
 
-/* Global */
+/*--------------------------------------------------------------
+# Global
+--------------------------------------------------------------*/
 
 html {
 	scroll-behavior: smooth;
@@ -1067,9 +1069,6 @@ button {
 article .entry-header {
 	display: none;
 }
-
-/* Global */
-
 
 /* Header */
 
@@ -1154,6 +1153,15 @@ footer a:active {
 
 /* News Ticker */
 
+/*--------------------------------------------------------------
+# Global
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+
+/* Intro */
 
 #intro {
 	padding: 0 1%;
@@ -1171,6 +1179,8 @@ footer a:active {
 	grid-column-start: 5;
 	grid-column-end: 9;
 }
+
+/* Intro */
 
 /* Seminars */
 
@@ -1233,6 +1243,8 @@ footer a:active {
 #seminars .entry-title:hover {
 	text-decoration: none;
 }
+
+/* Seminars */
 
 /* Events */
 
@@ -1375,6 +1387,8 @@ footer a:active {
 	grid-column-end: 9;
 }
 
+/* Team */
+
 /* Contact */
 
 #contact {
@@ -1490,7 +1504,11 @@ input[type="submit"] {
 	cursor: pointer;
 }
 
-secti button:hover {}
+section button:hover {}
+
+/* Contact */
+
+/* Footer */
 
 #footer {
 	width: 100vw;
@@ -1524,6 +1542,8 @@ secti button:hover {}
 	line-height: 1rem;
 	align-self: flex-end;
 }
+
+/* Footer */
 
 /* Simple Archive */
 
@@ -1576,7 +1596,15 @@ secti button:hover {}
 	column-gap: 30px;
 }
 
-/* Event */
+/* Simple Archive */
+
+/*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Custom Post Event
+--------------------------------------------------------------*/
 
 .post-template-event {
 	width: 100vw;
@@ -1683,8 +1711,6 @@ secti button:hover {}
 	margin: 0;
 }
 
-/* Event */
-
 /* Sidebar Event */
 
 .wrapper-event {
@@ -1742,6 +1768,9 @@ secti button:hover {}
 
 /* Sidebar Event */
 
+/*--------------------------------------------------------------
+# Custom Post Event
+--------------------------------------------------------------*/
 
 /* MOBILE */
 /* MOBILE */
