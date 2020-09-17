@@ -277,7 +277,7 @@ class EO_Calendar_Widget extends WP_Widget {
 
 		$before = "<table id='wp-calendar'>";
 
-		$title = sprintf( '<caption> %s </caption>', esc_html( eo_format_datetime( $month, 'F Y' ) ) );
+		$title = sprintf( '<caption> %s </caption>', esc_html( eo_format_datetime( $month, 'F' ) ) );
 
 		$head = '<thead><tr>';
 		for ( $d = 0; $d <= 6; $d++ ) :
@@ -290,7 +290,7 @@ class EO_Calendar_Widget extends WP_Widget {
 		$foot = sprintf(
 			"<tfoot><tr>
 				<td id='eo-widget-prev-month' colspan='3'><a title='%s' href='%s'>&laquo; %s</a></td>
-				<td class='pad'><?php echo get_the_date('M'); ?></td>
+				<td class='pad'>'<caption> %s </caption>'</td>
 				<td id='eo-widget-next-month' colspan='3'><a title='%s' href='%s'> %s &raquo; </a></td>
 			</tr></tfoot>",
 			esc_html__( 'Previous month', 'eventorganiser' ),
