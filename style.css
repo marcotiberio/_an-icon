@@ -1776,7 +1776,13 @@ section button:hover {}
 /* MOBILE */
 /* MOBILE */
 
-@media (max-width: 900px) {
+@media (max-width: 35rem) {
+
+	#logo {
+		position: fixed;
+		left: 14vw;
+		z-index: 1000;
+	}
 
 	.tabcontent {
 		display: none;
