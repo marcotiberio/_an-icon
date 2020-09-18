@@ -41,7 +41,7 @@
 				<a href="<?php echo $prev_permalink; ?>" rel="prev">
 					<span class="meta-nav"><</span>
 				</a>
-				<p><?php the_time('j M Y') ?></p>
+				<p><?php the_field('date'); ?></p>
 				<a href="<?php echo $next_permalink; ?>">
 					<span class="meta-nav">></span>
 				</a>
