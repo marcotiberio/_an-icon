@@ -27,7 +27,6 @@
 //Call the template header
 get_header(); ?>
 
-<div class="back"><h1 onclick="goBack()">X</h1></div>
 
 <div id="primary">
 	<div id="content" role="main">
