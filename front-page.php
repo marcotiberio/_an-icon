@@ -212,19 +212,7 @@ get_header();
 
 	<section id="events">
 		<div id="event-list">
-			<?php
-			while ( have_posts() ) :
-				the_post();
-
-				get_template_part( 'event-organiser/single-event', 'post' );
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
-			endwhile; // End of the loop.
-			?>
+		
 		</div>
 		<div id="customSidebar" class="sidebar">
 			<?php dynamic_sidebar( 'custom-sidebar' ); ?>
