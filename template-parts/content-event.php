@@ -47,7 +47,7 @@
 				</a>
 			</div>
 			<div class="event-time">
-				<p>17:00 – 19:00</p>
+				<?php the_field('time'); ?>
 			</div>
 		</div>
 		<div class="event-type">
