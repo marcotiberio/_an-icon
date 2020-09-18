@@ -44,32 +44,66 @@ get_header(); ?>
 			</header><!-- .entry-header -->
 	
 			<div class="entry-content">
-				<!-- Get event information, see template: event-meta-event-single.php -->
-				<?php eo_get_template_part( 'event-meta', 'event-single' ); ?>
-
-				<!-- The content or the description of the event-->
-				<?php the_content(); ?>
-			</div><!-- .entry-content -->
-
-			<footer class="entry-meta">
+		<div class="entry-info">
 			<?php
-			//Events have their own 'event-category' taxonomy. Get list of categories this event is in.
-			$categories_list = get_the_term_list( get_the_ID(), 'event-category', '', ', ','' );
-
-			if ( '' != $categories_list ) {
-				$utility_text = __( 'This event was posted in %1$s by <a href="%3$s">%2$s</a>.', 'eventorganiser' );
-			} else {
-				$utility_text = __( 'This event was posted by <a href="%3$s">%2$s</a>.', 'eventorganiser' );
-			}
-			printf($utility_text,
-				$categories_list,
-				get_the_author(),
-				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )
-			);
+				$prev_post = get_previous_post();
+				$prev_id = $prev_post->ID;
+				$prev_permalink = get_permalink($prev_id);
+				$next_post = get_next_post();
+				$next_id = $next_post->ID;
+				$next_permalink = get_permalink($next_id);
 			?>
+			<div class="event-nav">
+				<a href="<?php echo $prev_permalink; ?>" rel="prev">
+					<span class="meta-nav"><</span>
+				</a>
+				<p><?php the_time('j M Y') ?></p>
+				<a href="<?php echo $next_permalink; ?>">
+					<span class="meta-nav">></span>
+				</a>
+			</div>
+			<div class="event-time">
+				<?php the_field('time'); ?>
+			</div>
+		</div>
+		<div class="event-type">
+			<h1>Seminar of Philosophy of Image</h1>
+		</div>
+		<?php
+			if ( is_singular() ) :
+				the_title( '<h1 class="entry-title">', '</h1>' );
+			else :
+				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			endif;
 
-			<?php edit_post_link( __( 'Edit' ), '<span class="edit-link">', '</span>' ); ?>
-			</footer><!-- .entry-meta -->
+			if ( 'post' === get_post_type() ) :
+				?>
+		<?php endif; ?>
+		<?php
+		the_content(
+			sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'anicon' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				wp_kses_post( get_the_title() )
+			)
+		);
+
+		wp_link_pages(
+			array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'anicon' ),
+				'after'  => '</div>',
+			)
+		);
+		?>
+	</div><!-- .entry-content -->
+
 
 			</article><!-- #post-<?php the_ID(); ?> -->			
 
