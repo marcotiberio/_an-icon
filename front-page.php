@@ -58,7 +58,8 @@ get_header();
 						<h3 class="subsection-title">2019/2020</h3>
 						<ul>
 						<?php
-							$recent_posts = wp_get_recent_posts(array('post_type'=>'event'));
+							$recent_posts = wp_get_recent_posts(array('post_type'=>'event',
+											'include' => get_cat_ID($atts['category'])));
 							foreach( $recent_posts as $recent ){
 								echo '<li><a href="' . get_permalink($recent["ID"]) . '" title="Look '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a> </li> ';
 							}
