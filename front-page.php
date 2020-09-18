@@ -56,15 +56,26 @@ get_header();
 				<div id="20192020" class="tabcontent" style="display: grid;">
 					<div class="post-list">
 						<h3 class="subsection-title">2019/2020</h3>
-						<ul>
-						<?php
-							$recent_posts = wp_get_recent_posts(array('post_type'=>'event',
-											'include' => get_cat_ID($atts['illusion'])));
-							foreach( $recent_posts as $recent ){
-								echo '<li><a href="' . get_permalink($recent["ID"]) . '" title="Look '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a> </li> ';
-							}
+						<?php 
+						// the query
+						$the_query = new WP_Query( array(
+							'post_type' => 'event',
+							'category_name' => 'illusion',
+							'posts_per_page' => 10,
+						)); 
 						?>
-						</ul>
+
+						<?php if ( $the_query->have_posts() ) : ?>
+						<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+							<?php the_title(); ?>
+
+						<?php endwhile; ?>
+						<?php wp_reset_postdata(); ?>
+
+						<?php else : ?>
+						<p><?php __('No News'); ?></p>
+						<?php endif; ?>
 					</div>
 
 					<div class="seminar-description">
