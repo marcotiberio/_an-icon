@@ -61,7 +61,7 @@ get_header();
 							'post_type' => 'event',
 							'post_status' => 'publish',
 							'category_name' => 'illusion',
-							'posts_per_page' => -1,
+							'posts_per_page' => 10,
 						);
 						$arr_posts = new WP_Query( $args );
 							
