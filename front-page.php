@@ -225,10 +225,9 @@ get_header();
 
 		$loop = new WP_Query( $args ); 
 			
-		while ( $loop->have_posts() ) : 
-			the_post();
-
-			get_template_part( 'template-parts/content-event', get_post_type('event') );
+		while ( $loop->have_posts() ) : $loop->the_post(); 
+			print the_title(); 
+			the_excerpt(); 
 		endwhile;
 
 		wp_reset_postdata(); 
