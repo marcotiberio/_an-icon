@@ -33,7 +33,6 @@
 				$prev_post = get_previous_post();
 				$prev_id = $prev_post->ID;
 				$prev_permalink = get_permalink($prev_id);
-				$fount_post = post_exists( "My Post Title",'','','news');
 				$next_post = get_next_post();
 				$next_id = $next_post->ID;
 				$next_permalink = get_permalink($next_id);
