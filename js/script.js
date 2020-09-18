@@ -61,3 +61,10 @@ $('document').ready(function() {
 function goBack() {
     window.history.back();
 }
+
+
+$(document).ready(function () {
+    $("#buttonMenu").click(function () {
+        $("#primary-menu").slideToggle("fast");
+    });
+});
