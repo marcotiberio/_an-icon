@@ -210,7 +210,6 @@ get_header();
 
 	<section id="events">
 		<div id="event-list">
-
 		
 		</div>
 		<div id="customSidebar" class="sidebar">
