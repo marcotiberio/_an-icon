@@ -29,11 +29,23 @@
 
 	<div class="entry-content">
 		<div class="entry-info">
-		<?php $posts = query_posts($query_string); if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-<?php previous_post_link(); ?> | <?php next_post_link(); ?>
-
-<?php endwhile; endif; ?>
+			<?php
+				$prev_post = get_previous_post();
+				$prev_id = $prev_post->ID;
+				$prev_permalink = get_permalink($prev_id);
+				$next_post = get_next_post();
+				$next_id = $next_post->ID;
+				$next_permalink = get_permalink($next_id);
+			?>
+			<div class="event-nav">
+				<a href="<?php echo $prev_permalink; ?>" rel="prev">
+					<span class="meta-nav"><</span>
+				</a>
+				<p><?php the_time('j M Y') ?></p>
+				<a href="<?php echo $next_permalink; ?>">
+					<span class="meta-nav">></span>
+				</a>
+			</div>
 			<div class="event-time">
 				<p>17:00 – 19:00</p>
 			</div>
