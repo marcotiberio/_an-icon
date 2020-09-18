@@ -59,6 +59,7 @@ get_header();
 						<?php
 						$events = eo_get_events(array(
 								'numberposts'=>10,
+								'event-category'=>'illusion',
 								'showpastevents'=>true,//Will be deprecated, but set it to true to play it safe.
 							));
 
