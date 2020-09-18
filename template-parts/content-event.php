@@ -30,13 +30,22 @@
 	<div class="entry-content">
 		<div class="entry-info">
 			<?php
-				the_post_navigation(
-					array(
-						'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'anicon' ) . '</span> <span class="nav-title">%title</span>',
-						'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'anicon' ) . '</span> <span class="nav-title">%title</span>',
-					)
-				);
+				$prev_post = get_previous_post();
+				$prev_id = $prev_post->ID;
+				$prev_permalink = get_permalink($prev_id);
+				$next_post = get_next_post();
+				$next_id = $next_post->ID;
+				$next_permalink = get_permalink($next_id);
 			?>
+			<div class="event-nav">
+				<a href="<?php echo $prev_permalink; ?>" rel="prev">
+					<span class="meta-nav"><</span>
+				</a>
+				<p><?php the_time('j M Y') ?></p>
+				<a href="<?php echo $next_permalink; ?>">
+					<span class="meta-nav">></span>
+				</a>
+			</div>
 			<div class="event-time">
 				<p>17:00 – 19:00</p>
 			</div>
