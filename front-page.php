@@ -57,25 +57,35 @@ get_header();
 					<div class="post-list">
 						<h3 class="subsection-title">2019/2020</h3>
 						<?php 
-						// the query
-						$the_query = new WP_Query( array(
+						$args = array(
 							'post_type' => 'event',
+							'post_status' => 'publish',
 							'category_name' => 'illusion',
 							'posts_per_page' => 10,
-						)); 
-						?>
+						);
+						$arr_posts = new WP_Query( $args );
+							
+						if ( $arr_posts->have_posts() ) :
+							
+							
+							while ( $arr_posts->have_posts() ) :
+								$arr_posts->the_post();
+								?>
+						<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+							<p><?php the_time('j M Y') ?></p>
+							<span><a href="<?php the_permalink(); ?>">
+									<?php
+										if ( is_singular() ) :
+											the_title( '<p class="entry-title">', '</p>' );
+										else :
+											the_title( '<p class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></p>' );
+										endif;?>
+								</a></span><span>autore</span>
+						</article>
 
-						<?php if ( $the_query->have_posts() ) : ?>
-						<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-
-							<?php the_title(); ?>
-
-						<?php endwhile; ?>
-						<?php wp_reset_postdata(); ?>
-
-						<?php else : ?>
-						<p><?php __('No News'); ?></p>
-						<?php endif; ?>
+						<?php
+							endwhile;
+						endif; ?>
 					</div>
 
 					<div class="seminar-description">
