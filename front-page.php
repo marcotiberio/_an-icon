@@ -94,36 +94,28 @@ get_header();
 				<div id="20182019" class="tabcontent">
 					<div class="post-list">
 						<h3 class="subsection-title">2018/2019</h3>
-						<?php 
-						$args = array(
-							'post_type' => 'event',
-							'post_status' => 'publish',
-							'category_name' => 'avatar',
-							'posts_per_page' => 10,
-						);
-						$arr_posts = new WP_Query( $args );
-							
-						if ( $arr_posts->have_posts() ) :
-							
-							
-							while ( $arr_posts->have_posts() ) :
-								$arr_posts->the_post();
-								?>
-						<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-							<p><?php the_time('j M Y') ?></p>
-							<span><a href="<?php the_permalink(); ?>">
-									<?php
-										if ( is_singular() ) :
-											the_title( '<p class="entry-title">', '</p>' );
-										else :
-											the_title( '<p class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></p>' );
-										endif;?>
-								</a></span><span>autore</span>
-						</article>
-
 						<?php
-							endwhile;
-						endif; ?>
+						$events = eo_get_events(array(
+								'numberposts'=>10,
+								'event-category'=>'avatar',
+								'showpastevents'=>true,//Will be deprecated, but set it to true to play it safe.
+							));
+
+						if($events):
+							echo '<ul>';
+							foreach ($events as $event):
+								//Check if all day, set format accordingly
+								$format = ( eo_is_all_day($event->ID) ? get_option('date_format') : get_option('date_format') );
+								printf(
+									'<li><a href="%s"> %s </a> %s </li>',
+									get_permalink($event->ID),
+									get_the_title($event->ID),
+									eo_get_the_start( $format, $event->ID, $event->occurrence_id )
+								);
+							endforeach;
+							echo '</ul>';
+						endif;
+						?>
 					</div>
 
 					<div class="seminar-description">
@@ -140,36 +132,28 @@ get_header();
 				<div id="20162017" class="tabcontent">
 					<div class="post-list">
 						<h3 class="subsection-title">2016/2027</h3>
-						<?php 
-						$args = array(
-							'post_type' => 'post',
-							'post_status' => 'publish',
-							'category_name' => 'immersion',
-							'posts_per_page' => 5,
-						);
-						$arr_posts = new WP_Query( $args );
-							
-						if ( $arr_posts->have_posts() ) :
-							
-							
-							while ( $arr_posts->have_posts() ) :
-								$arr_posts->the_post();
-								?>
-						<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-							<p><?php the_time('j M Y') ?></p>
-							<span><a href="<?php the_permalink(); ?>">
-									<?php
-										if ( is_singular() ) :
-											the_title( '<p class="entry-title">', '</p>' );
-										else :
-											the_title( '<p class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></p>' );
-										endif;?>
-								</a></span><span>autore</span>
-						</article>
-
 						<?php
-							endwhile;
-						endif; ?>
+						$events = eo_get_events(array(
+								'numberposts'=>10,
+								'event-category'=>'immersion',
+								'showpastevents'=>true,//Will be deprecated, but set it to true to play it safe.
+							));
+
+						if($events):
+							echo '<ul>';
+							foreach ($events as $event):
+								//Check if all day, set format accordingly
+								$format = ( eo_is_all_day($event->ID) ? get_option('date_format') : get_option('date_format') );
+								printf(
+									'<li><a href="%s"> %s </a> %s </li>',
+									get_permalink($event->ID),
+									get_the_title($event->ID),
+									eo_get_the_start( $format, $event->ID, $event->occurrence_id )
+								);
+							endforeach;
+							echo '</ul>';
+						endif;
+						?>
 					</div>
 
 					<div class="seminar-description">
@@ -186,35 +170,28 @@ get_header();
 				<div id="20152016" class="tabcontent">
 					<div class="post-list">
 						<h3 class="subsection-title">2015/2016</h3>
-						<?php 
-						$args = array(
-							'post_type' => 'post',
-							'post_status' => 'publish',
-							'category_name' => 'thresholds',
-							'posts_per_page' => 5,
-						);
-						$arr_posts = new WP_Query( $args );
-							
-						if ( $arr_posts->have_posts() ) :
-							
-							
-							while ( $arr_posts->have_posts() ) :
-								$arr_posts->the_post();
-								?>
-						<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-							<p><?php the_time('j M Y') ?></p>
-							<span><a href="<?php the_permalink(); ?>">
-									<?php
-										if ( is_singular() ) :
-											the_title( '<p class="entry-title">', '</p>' );
-										else :
-											the_title( '<p class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></p>' );
-										endif;?>
-								</a></span><span>autore</span>
-						</article>
 						<?php
-						endwhile;
-					endif; ?>
+						$events = eo_get_events(array(
+								'numberposts'=>10,
+								'event-category'=>'thresholds',
+								'showpastevents'=>true,//Will be deprecated, but set it to true to play it safe.
+							));
+
+						if($events):
+							echo '<ul>';
+							foreach ($events as $event):
+								//Check if all day, set format accordingly
+								$format = ( eo_is_all_day($event->ID) ? get_option('date_format') : get_option('date_format') );
+								printf(
+									'<li><a href="%s"> %s </a> %s </li>',
+									get_permalink($event->ID),
+									get_the_title($event->ID),
+									eo_get_the_start( $format, $event->ID, $event->occurrence_id )
+								);
+							endforeach;
+							echo '</ul>';
+						endif;
+						?>
 
 					</div>
 
