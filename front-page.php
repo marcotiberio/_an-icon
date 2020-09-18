@@ -213,12 +213,24 @@ get_header();
 		<main id="primary" class="site-main">
 
 		<?php
-		while ( have_posts() ) :
-			the_post();
+		/**
+		 * Setup query to show the ‘services’ post type with ‘8’ posts.
+		 * Output the title with an excerpt.
+		 */
+		$args = array(  
+			'post_type' => 'event',
+			'post_status' => 'publish',
+			'posts_per_page' => 8, 
+		);
 
-			get_template_part( 'template-parts/content-event', get_post_type('event') );
+		$loop = new WP_Query( $args ); 
+			
+		while ( $loop->have_posts() ) : $loop->the_post(); 
+			print the_title(); 
+			the_excerpt(); 
+		endwhile;
 
-		endwhile; // End of the loop.
+		wp_reset_postdata(); 
 		?>
 
 		</main><!-- #main -->
