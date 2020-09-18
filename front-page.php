@@ -58,10 +58,10 @@ get_header();
 						<h3 class="subsection-title">2019/2020</h3>
 						<?php 
 						$args = array(
-							'post_type' => 'post',
+							'post_type' => 'event',
 							'post_status' => 'publish',
 							'category_name' => 'illusion',
-							'posts_per_page' => 5,
+							'posts_per_page' => -1,
 						);
 						$arr_posts = new WP_Query( $args );
 							
