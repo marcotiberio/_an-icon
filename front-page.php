@@ -211,7 +211,7 @@ get_header();
 	</section>
 
 	<section id="events">
-		<div>
+		<div id="event-list">
 			<?php
 				$events = eo_get_events(array(
 						'numberposts'=>10,
