@@ -210,7 +210,6 @@ get_header();
 
 	<section id="events">
 		<div id="event-list">
-		<main id="primary" class="site-main">
 
 		<?php
 		/**
@@ -223,15 +222,15 @@ get_header();
 			'posts_per_page' => 8, 
 		);
 
-		$loop = new WP_Query( $args ); 
-			
-		while ( $loop->have_posts() ) : $loop->the_post(); 
-			print the_title(); 
-			the_excerpt(); 
-		endwhile;
-
-		wp_reset_postdata(); 
-		?>
+		$loop = new WP_Query($args);
+			while ( $loop->have_posts() ) {
+				$loop->the_post();
+				?>
+				<div class="entry-content">
+					<?php the_title(); ?>
+					<?php the_content(); ?>
+				</div>
+			}
 
 		</main><!-- #main -->
 		</div>
