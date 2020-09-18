@@ -1795,8 +1795,8 @@ section button:hover {}
 		padding: 0 1%;
 		display: block !important;
 		column-gap: 30px;
-		font-size: 24px;
-		line-height: 30px;
+		font-size: 16px;
+		line-height: 20px;
 		color: #000000;
 	}
 
