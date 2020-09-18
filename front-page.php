@@ -211,28 +211,7 @@ get_header();
 	<section id="events">
 		<div id="event-list">
 
-		<?php
-		/**
-		 * Setup query to show the ‘services’ post type with ‘8’ posts.
-		 * Output the title with an excerpt.
-		 */
-		$args = array(  
-			'post_type' => 'event',
-			'post_status' => 'publish',
-			'posts_per_page' => 8, 
-		);
-
-		$loop = new WP_Query($args);
-			while ( $loop->have_posts() ) {
-				$loop->the_post();
-				?>
-				<div class="entry-content">
-					<?php the_title(); ?>
-					<?php the_content(); ?>
-				</div>
-			}
-
-		</main><!-- #main -->
+		
 		</div>
 		<div id="customSidebar" class="sidebar">
 			<?php dynamic_sidebar( 'custom-sidebar' ); ?>
