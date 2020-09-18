@@ -212,7 +212,9 @@ get_header();
 
 	<section id="events">
 		<div>
-			<?php
+		</div>
+		<div>
+		<?php
 			$events = eo_get_events(array(
 					'numberposts'=>10,
 					'showpastevents'=>true,//Will be deprecated, but set it to true to play it safe.
