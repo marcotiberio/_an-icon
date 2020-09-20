@@ -23,7 +23,7 @@
 		
 	</div>
 
-	<div class="event-thumbnail" style="background-image: url('http://r26.031.myftpupload.com/wp-content/uploads/2020/09/Event.png');">
+	<div class="event-thumbnail" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
 		
 	</div>
 
