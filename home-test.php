@@ -209,18 +209,35 @@ get_header();
 	</section>
 
 	<section id="events">
-		<?php if( have_rows('slides') ): ?>
-			<ul class="slides">
-			<?php while( have_rows('slides') ): the_row(); 
-				$image = get_sub_field('image');
+	<?php 
+		$args = array(
+			'post_type' => 'event',
+			'post_status' => 'publish',
+			'category_name' => 'illusion',
+			'posts_per_page' => 6,
+		);
+		$arr_posts = new WP_Query( $args );
+			
+		if ( $arr_posts->have_posts() ) :
+			
+			
+			while ( $arr_posts->have_posts() ) :
+				$arr_posts->the_post();
 				?>
-				<li>
-					<?php echo wp_get_attachment_image( $image, 'full' ); ?>
-					<p><?php the_sub_field('caption'); ?></p>
-				</li>
-			<?php endwhile; ?>
-			</ul>
-		<?php endif; ?>
+				<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<div class="event-header">
+						<p><?php the_field('type'); ?></p>
+						<a href="<?php the_permalink(); ?>"><h2><?php the_field('title'); ?></h2></a>
+						<p><?php the_field('when'); ?></p>
+					</div>
+					<div class="event-info">
+						<div class="details"><?php the_field('description'); ?></div>
+					</div>
+				</article>
+
+				<?php
+			endwhile;
+		endif; ?>
 	</section>
 
 	<section id="publications">
