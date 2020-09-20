@@ -226,12 +226,9 @@ get_header();
 				?>
 				<article class="latestpost--archive" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<div class="event-header">
-						<p><?php the_field('type'); ?></p>
-						<a href="<?php the_permalink(); ?>"><h2><?php the_field('title'); ?></h2></a>
-						<p><?php the_field('when'); ?></p>
-					</div>
-					<div class="event-info">
-						<div class="details"><?php the_field('description'); ?></div>
+						<a href="<?php the_permalink(); ?>">
+							<h2><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></h2>
+						</a>
 					</div>
 				</article>
 
