@@ -10,21 +10,36 @@
 ?>
 
 <header class="entry-header">
-	<h1>2019/2020</h1>
+	<h1><?php $cat = get_the_category(); echo $cat[0]->cat_name; ?></h1>
 	<h1>Event</h1>
 </header>
 
-<article style="background-color:<?php the_field('color'); ?>" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" style="background-color: white;" <?php post_class(); ?>>
 
 	<div class="archive">
 
 	<?php
-	get_sidebar('sidebar-1'); ?>
+
+		$related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 5, 'post__not_in' => array($post->ID) ) );
+		if( $related ) foreach( $related as $post ) {
+		setup_postdata($post); ?>
+		<ul> 
+			<li>
+				<p><?php the_field('date'); ?></p>
+				<span><a href="<?php the_permalink(); ?>"><p class="event-title"><?php the_field('event1_title'); ?></p></a></span>
+				<span class="event-author"><a href="<?php the_permalink(); ?>"><?php the_field('event1_author'); ?></a></span>
+				<span><a href="<?php the_permalink(); ?>"><p class="event-title"><?php the_field('event2_title'); ?></p></a>
+				<span class="event-author"><a href="<?php the_permalink(); ?>"><?php the_field('event2_author'); ?></a></span>
+			</li>
+		</ul>   
+		<?php }
+		wp_reset_postdata(); ?>
 		
 	</div>
 
-	<div class="event-thumbnail" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
-		
+	<div class="event-thumbnail">
+		<?php anicon_post_thumbnail(); ?>
+		<p><?php the_field('image_caption'); ?></p>
 	</div>
 
 	<div class="entry-content">
@@ -41,51 +56,31 @@
 				<a href="<?php echo $prev_permalink; ?>" rel="prev">
 					<span class="meta-nav"><</span>
 				</a>
-				<p><?php the_field('date'); ?></p>
+				<p><?php the_field('date'); ?></p></a>
 				<a href="<?php echo $next_permalink; ?>">
 					<span class="meta-nav">></span>
 				</a>
 			</div>
 			<div class="event-time">
-				<?php the_field('time'); ?>
+				<span><?php the_field('time_start'); ?>:00</span> &mdash; <span><?php the_field('time_end'); ?>:00</span>
 			</div>
 		</div>
 		<div class="event-type">
 			<h1>Seminar of Philosophy of Image</h1>
 		</div>
-		<?php
-			if ( is_singular() ) :
-				the_title( '<h1 class="entry-title">', '</h1>' );
-			else :
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-			endif;
+		<div class="first-event-title">
+			<a href="<?php the_permalink(); ?>"><h2><?php the_field('event1_title'); ?></h2></a>
+			<span style="text-decoration: underline;"><?php the_field('event1_author'); ?>,</span>
+			<span style="text-decoration: none;"><?php the_field('event1_authoraffiliation'); ?></span>
+		</div>
+		<div class="first-event-description"><?php the_field('event1_description'); ?></div>
 
-			if ( 'post' === get_post_type() ) :
-				?>
-		<?php endif; ?>
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'anicon' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'anicon' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
+		<div class="second-event-title">
+			<a href="<?php the_permalink(); ?>"><h2><?php the_field('event2_title'); ?></h2></a>
+			<span style="text-decoration: underline;"><?php the_field('event2_author'); ?>,</span>
+			<span style="text-decoration: none;"><?php the_field('event2_authoraffiliation'); ?></span>
+		</div>
+		<div class="second-event-description"><?php the_field('event2_description'); ?></div>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

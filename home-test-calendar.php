@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Front Page Test
+ * Template Name: Front Page Test Calendar
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -254,10 +254,10 @@ get_header();
 								<a href="<?php the_permalink(); ?>"><h2><?php the_field('event1_title'); ?></h2></a>
 							<?php endif; ?>
 							<?php if( get_field('event1_author') ): ?>
-								<span class="event-author"><?php the_field('event1_author'); ?>,</span>
+								<span style="text-decoration: underline;"><?php the_field('event1_author'); ?>,</span>
 							<?php endif; ?>
 							<?php if( get_field('event1_authoraffiliation') ): ?>
-								<span class="event-author-affiliation"><?php the_field('event1_authoraffiliation'); ?></span>
+								<span style="text-decoration: none;"><?php the_field('event1_authoraffiliation'); ?></span>
 							<?php endif; ?>
 						</div>
 						<div class="event-title">
@@ -265,10 +265,10 @@ get_header();
 								<a href="<?php the_permalink(); ?>"><h2><?php the_field('event2_title'); ?></h2></a>
 							<?php endif; ?>
 							<?php if( get_field('event2_author') ): ?>
-								<span class="event-author"><?php the_field('event2_author'); ?>,</span>
+								<span style="text-decoration: underline;"><?php the_field('event2_author'); ?>,</span>
 							<?php endif; ?>
 							<?php if( get_field('event2_authoraffiliation') ): ?>
-								<span class="event-author-affiliation"><?php the_field('event2_authoraffiliation'); ?></span>
+								<span style="text-decoration: none;"><?php the_field('event2_authoraffiliation'); ?></span>
 							<?php endif; ?>
 						</div>
 					</div>
@@ -277,8 +277,6 @@ get_header();
 
 		<?php endforeach; 
 	?>
-
-	<?php echo do_shortcode('[clndr id=test]'); ?>
 
 	</section>
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Front Page Test
+ * Template Name: Front Page
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -32,10 +32,10 @@ get_header();
 				<div class="section-intro">
 					<?php the_field('seminars_intro'); ?>
 				</div>
-				<!-- Tab links -->
 				<div>
+					<!-- Tab links -->
 					<div class="tab">
-						<button class="tablinks active" onclick="openEvent(event, '20192020')">- Illusion 2019/2020</button>
+						<button class="tablinks" onclick="openEvent(event, '20192020')">- Illusion 2019/2020</button>
 					</div>
 					<div class="tab">
 						<button class="tablinks" onclick="openEvent(event, '20182019')">- Avatar 2018/2019</button>
@@ -55,31 +55,18 @@ get_header();
 					<div class="post-list">
 						<h3 class="subsection-title">2019/2020</h3>
 						<?php
-						$args = array(
-							'numberposts'	=> 20,
-							'post_type'		=> 'post',
-							'category_name' => 'illusion'
-						);
-						$my_posts = get_posts( $args );
-						foreach ($my_posts as $post) :  setup_postdata($post); 
-						?> 
-							<article class="latestpost fade" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<div class="event-details">
-									<div class="event-header">
-										<div class="entry-info">
-										<li>
-											<p><?php the_field('date'); ?></p>
-											<span><a href="<?php the_permalink(); ?>"><p class="event-title"><?php the_field('event1_title'); ?></p></a></span>
-											<span class="event-author"><a href="<?php the_permalink(); ?>"><?php the_field('event1_author'); ?></a></span>
-											<span><a href="<?php the_permalink(); ?>"><p class="event-title"><?php the_field('event2_title'); ?></p></a>
-											<span class="event-author"><a href="<?php the_permalink(); ?>"><?php the_field('event2_author'); ?></a></span>
-										</li>
-									</div>
-								</div>
-							</article>
-
-						<?php endforeach; 
-						?>
+							$related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 5, 'post__not_in' => array($post->ID) ) );
+							if( $related ) foreach( $related as $post ) {
+							setup_postdata($post); ?>
+							<ul> 
+								<li>
+									<p><?php the_field('date'); ?></p>
+									<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+									<span style="text-decoration: underline;"><?php the_field('author'); ?></span>
+								</li>
+							</ul>   
+						<?php }
+						wp_reset_postdata(); ?>
 					</div>
 
 					<div class="seminar-description">
@@ -88,7 +75,7 @@ get_header();
 						$description = get_field_object('seminar_description', 660);
 						?>
 						<h3><?php echo $title['value']; ?></h3>
-						<?php echo $description['value']; ?>
+						<p><?php echo $description['value']; ?></p>
 					</div>
 				</div>
 
@@ -97,30 +84,20 @@ get_header();
 					<div class="post-list">
 						<h3 class="subsection-title">2018/2019</h3>
 						<?php
-						$args = array(
-							'numberposts'	=> 20,
-							'post_type'		=> 'post',
-							'category_name' => 'avatar'
-						);
-						$my_posts = get_posts( $args );
-						foreach ($my_posts as $post) :  setup_postdata($post); 
-						?> 
-							<article class="latestpost fade" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<div class="event-details">
-									<div class="event-header">
-										<div class="entry-info">
-											<p><?php the_field('date'); ?></p>
-										</div>
-										<a href="<?php the_permalink(); ?>">
-											<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-										</a>
-										<span><?php the_field('author'); ?></span>
-									</div>
-								</div>
-							</article>
-
-						<?php endforeach; 
-						?>
+							$related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 5, 'post__not_in' => array($post->ID) ) );
+							if( $related ) foreach( $related as $post ) {
+							setup_postdata($post); ?>
+							<ul> 
+								<li>
+									<p><?php the_field('date'); ?></p>
+									<a href="<?php the_permalink(); ?>"><h2><?php the_field('event1_title'); ?></h2></a>
+									<span style="text-decoration: underline;"><?php the_field('event1_author'); ?></span>
+									<a href="<?php the_permalink(); ?>"><h2><?php the_field('event2_title'); ?></h2></a>
+									<span style="text-decoration: underline;"><?php the_field('event2_author'); ?></span>
+								</li>
+							</ul>   
+						<?php }
+						wp_reset_postdata(); ?>
 					</div>
 
 					<div class="seminar-description">
@@ -138,29 +115,26 @@ get_header();
 					<div class="post-list">
 						<h3 class="subsection-title">2016/2027</h3>
 						<?php
-						$args = array(
-							'numberposts'	=> 20,
-							'post_type'		=> 'post',
-							'category_name' => 'immersion'
-						);
-						$my_posts = get_posts( $args );
-						foreach ($my_posts as $post) :  setup_postdata($post); 
-						?> 
-							<article class="latestpost fade" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<div class="event-details">
-									<div class="event-header">
-										<div class="entry-info">
-											<p><?php the_field('date'); ?></p>
-										</div>
-										<a href="<?php the_permalink(); ?>">
-											<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-										</a>
-										<span><?php the_field('author'); ?></span>
-									</div>
-								</div>
-							</article>
+						$events = eo_get_events(array(
+								'numberposts'=>10,
+								'event-category'=>'immersion',
+								'showpastevents'=>true,//Will be deprecated, but set it to true to play it safe.
+							));
 
-						<?php endforeach; 
+						if($events):
+							echo '<ul>';
+							foreach ($events as $event):
+								//Check if all day, set format accordingly
+								$format = ( eo_is_all_day($event->ID) ? get_option('date_format') : get_option('date_format') );
+								printf(
+									'<li><a href="%s"> %s </a> %s </li>',
+									get_permalink($event->ID),
+									get_the_title($event->ID),
+									eo_get_the_start( $format, $event->ID, $event->occurrence_id )
+								);
+							endforeach;
+							echo '</ul>';
+						endif;
 						?>
 					</div>
 
@@ -179,29 +153,26 @@ get_header();
 					<div class="post-list">
 						<h3 class="subsection-title">2015/2016</h3>
 						<?php
-						$args = array(
-							'numberposts'	=> 20,
-							'post_type'		=> 'post',
-							'category_name' => 'thresholds'
-						);
-						$my_posts = get_posts( $args );
-						foreach ($my_posts as $post) :  setup_postdata($post); 
-						?> 
-							<article class="latestpost fade" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<div class="event-details">
-									<div class="event-header">
-										<div class="entry-info">
-											<p><?php the_field('date'); ?></p>
-										</div>
-										<a href="<?php the_permalink(); ?>">
-											<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-										</a>
-										<span style="text-decoration: underline;"><?php the_field('author'); ?></span>
-									</div>
-								</div>
-							</article>
+						$events = eo_get_events(array(
+								'numberposts'=>10,
+								'event-category'=>'thresholds',
+								'showpastevents'=>true,//Will be deprecated, but set it to true to play it safe.
+							));
 
-						<?php endforeach; 
+						if($events):
+							echo '<ul>';
+							foreach ($events as $event):
+								//Check if all day, set format accordingly
+								$format = ( eo_is_all_day($event->ID) ? get_option('date_format') : get_option('date_format') );
+								printf(
+									'<li><a href="%s"> %s </a> %s </li>',
+									get_permalink($event->ID),
+									get_the_title($event->ID),
+									eo_get_the_start( $format, $event->ID, $event->occurrence_id )
+								);
+							endforeach;
+							echo '</ul>';
+						endif;
 						?>
 
 					</div>
@@ -222,64 +193,12 @@ get_header();
 	</section>
 
 	<section id="events">
-
-	<?php
-		$args = array(
-			'numberposts'	=> 20,
-			'post_type'		=> 'post'
-		);
-		$my_posts = get_posts( $args );
-		foreach ($my_posts as $post) :  setup_postdata($post); 
-		?> 
-			<article class="latestpost--archive fade" style="background-color:<?php the_field('color'); ?>" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<div class="event-thumbnail" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>'); background-color:<?php the_field('color'); ?>" id="post-<?php the_ID(); ?>"></div>
-				<div class="event-details">
-					<h1>Event</h1>
-					<div class="event-header">
-						<div class="entry-info">
-							<div class="slider-nav">
-								<a class="prev" onclick="plusSlides(-1)"><</a>
-								<p><?php the_field('date'); ?></p>
-								<a class="next" onclick="plusSlides(1)">></a>
-							</div>
-							<div class="event-time">
-								<span><?php the_field('time_start'); ?>:00</span> &mdash; <span><?php the_field('time_end'); ?>:00</span>
-							</div>
-						</div>
-						<div class="event-type">
-							<h1>Seminar of Philosophy of Image</h1>
-						</div>
-						<div class="event-title">
-							<?php if( get_field('event1_title') ): ?>
-								<a href="<?php the_permalink(); ?>"><h2><?php the_field('event1_title'); ?></h2></a>
-							<?php endif; ?>
-							<?php if( get_field('event1_author') ): ?>
-								<span class="event-author"><?php the_field('event1_author'); ?>,</span>
-							<?php endif; ?>
-							<?php if( get_field('event1_authoraffiliation') ): ?>
-								<span class="event-author-affiliation"><?php the_field('event1_authoraffiliation'); ?></span>
-							<?php endif; ?>
-						</div>
-						<div class="event-title">
-							<?php if( get_field('event2_title') ): ?>
-								<a href="<?php the_permalink(); ?>"><h2><?php the_field('event2_title'); ?></h2></a>
-							<?php endif; ?>
-							<?php if( get_field('event2_author') ): ?>
-								<span class="event-author"><?php the_field('event2_author'); ?>,</span>
-							<?php endif; ?>
-							<?php if( get_field('event2_authoraffiliation') ): ?>
-								<span class="event-author-affiliation"><?php the_field('event2_authoraffiliation'); ?></span>
-							<?php endif; ?>
-						</div>
-					</div>
-				</div>
-			</article>
-
-		<?php endforeach; 
-	?>
-
-	<?php echo do_shortcode('[clndr id=test]'); ?>
-
+		<div id="event-list">
+		
+		</div>
+		<div id="customSidebar" class="sidebar">
+			<?php dynamic_sidebar( 'custom-sidebar' ); ?>
+		</div>
 	</section>
 
 	<section id="publications">
@@ -669,30 +588,6 @@ get_header();
 		}
 		document.getElementById(cityName).style.display = "grid";
 		evt.currentTarget.className += " active";
-	}
-</script>
-
-<script>
-	var slideIndex = 1;
-	showSlides(slideIndex);
-
-	function plusSlides(n) {
-	showSlides(slideIndex += n);
-	}
-
-	function currentSlide(n) {
-	showSlides(slideIndex = n);
-	}
-
-	function showSlides(n) {
-	var i;
-	var slides = document.getElementsByClassName("latestpost--archive");
-	if (n > slides.length) {slideIndex = 1}    
-	if (n < 1) {slideIndex = slides.length}
-	for (i = 0; i < slides.length; i++) {
-		slides[i].style.display = "none";  
-	}
-	slides[slideIndex-1].style.display = "grid";  
 	}
 </script>
 
