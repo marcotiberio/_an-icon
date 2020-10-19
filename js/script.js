@@ -61,3 +61,12 @@ $('document').ready(function() {
 // function goBack() {
 //     window.history.back();
 // }
+
+// Swiper
+
+var swiper = new Swiper('.swiper-container', {
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	});

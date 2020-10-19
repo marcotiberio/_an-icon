@@ -223,60 +223,74 @@ get_header();
 
 	<section id="events">
 
-	<?php
-		$args = array(
-			'numberposts'	=> 20,
-			'post_type'		=> 'post'
-		);
-		$my_posts = get_posts( $args );
-		foreach ($my_posts as $post) :  setup_postdata($post); 
-		?> 
-			<article class="latestpost--archive fade" style="background-color:<?php the_field('color'); ?>" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<div class="event-thumbnail" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>'); background-color:<?php the_field('color'); ?>" id="post-<?php the_ID(); ?>"></div>
-				<div class="event-details">
-					<h1>Event</h1>
-					<div class="event-header">
-						<div class="entry-info">
-							<div class="slider-nav">
-								<a class="prev" onclick="plusSlides(-1)"><</a>
-								<p><?php the_field('date'); ?></p>
-								<a class="next" onclick="plusSlides(1)">></a>
+	<!-- Swiper -->
+	<div class="swiper-container">
+			<div class="swiper-wrapper">
+				
+			<?php
+				$args = array(
+					'numberposts'	=> 20,
+					'post_type'		=> 'post'
+				);
+				$my_posts = get_posts( $args );
+				foreach ($my_posts as $post) :  setup_postdata($post); 
+				?> 
+					<article class="latestpost--archive fade swiper-slide" style="background-color:<?php the_field('color'); ?>" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<div class="event-thumbnail" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>'); background-color:<?php the_field('color'); ?>" id="post-<?php the_ID(); ?>"></div>
+						<div class="event-details">
+							<h1>Event</h1>
+							<div class="event-header">
+								<div class="entry-info">
+									<!-- <div class="slider-nav">
+										<a class="prev" onclick="plusSlides(-1)"><</a>
+										<p><?php the_field('date'); ?></p>
+										<a class="next" onclick="plusSlides(1)">></a>
+									</div> -->
+									<div class="event-time">
+										<span><?php the_field('time_start'); ?>:00</span> &mdash; <span><?php the_field('time_end'); ?>:00</span>
+									</div>
+								</div>
+								<div class="event-type">
+									<h1>Seminar of Philosophy of Image</h1>
+								</div>
+								<div class="event-title">
+									<?php if( get_field('event1_title') ): ?>
+										<a href="<?php the_permalink(); ?>"><h2><?php the_field('event1_title'); ?></h2></a>
+									<?php endif; ?>
+									<?php if( get_field('event1_author') ): ?>
+										<span class="event-author"><?php the_field('event1_author'); ?>,</span>
+									<?php endif; ?>
+									<?php if( get_field('event1_authoraffiliation') ): ?>
+										<span class="event-author-affiliation"><?php the_field('event1_authoraffiliation'); ?></span>
+									<?php endif; ?>
+								</div>
+								<div class="event-title">
+									<?php if( get_field('event2_title') ): ?>
+										<a href="<?php the_permalink(); ?>"><h2><?php the_field('event2_title'); ?></h2></a>
+									<?php endif; ?>
+									<?php if( get_field('event2_author') ): ?>
+										<span class="event-author"><?php the_field('event2_author'); ?>,</span>
+									<?php endif; ?>
+									<?php if( get_field('event2_authoraffiliation') ): ?>
+										<span class="event-author-affiliation"><?php the_field('event2_authoraffiliation'); ?></span>
+									<?php endif; ?>
+								</div>
 							</div>
-							<div class="event-time">
-								<span><?php the_field('time_start'); ?>:00</span> &mdash; <span><?php the_field('time_end'); ?>:00</span>
-							</div>
 						</div>
-						<div class="event-type">
-							<h1>Seminar of Philosophy of Image</h1>
-						</div>
-						<div class="event-title">
-							<?php if( get_field('event1_title') ): ?>
-								<a href="<?php the_permalink(); ?>"><h2><?php the_field('event1_title'); ?></h2></a>
-							<?php endif; ?>
-							<?php if( get_field('event1_author') ): ?>
-								<span class="event-author"><?php the_field('event1_author'); ?>,</span>
-							<?php endif; ?>
-							<?php if( get_field('event1_authoraffiliation') ): ?>
-								<span class="event-author-affiliation"><?php the_field('event1_authoraffiliation'); ?></span>
-							<?php endif; ?>
-						</div>
-						<div class="event-title">
-							<?php if( get_field('event2_title') ): ?>
-								<a href="<?php the_permalink(); ?>"><h2><?php the_field('event2_title'); ?></h2></a>
-							<?php endif; ?>
-							<?php if( get_field('event2_author') ): ?>
-								<span class="event-author"><?php the_field('event2_author'); ?>,</span>
-							<?php endif; ?>
-							<?php if( get_field('event2_authoraffiliation') ): ?>
-								<span class="event-author-affiliation"><?php the_field('event2_authoraffiliation'); ?></span>
-							<?php endif; ?>
-						</div>
-					</div>
-				</div>
-			</article>
+					</article>
 
-		<?php endforeach; 
-	?>
+					<?php endforeach; 
+				?>
+
+			</div>
+			<!-- Add Arrows -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div>
+
+		<div class="swiper-slide" style="background-image: url(<?php echo esc_url( $image['url'] ); ?>);"></div>
+
+	
 
 	<?php echo do_shortcode('[clndr id=test]'); ?>
 
