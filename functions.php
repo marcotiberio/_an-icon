@@ -51,6 +51,7 @@ if ( ! function_exists( 'anicon_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'anicon' ),
+				'mobile-menu' => esc_html__( 'Mobile', '_motius' )
 			)
 		);
 
@@ -155,12 +156,15 @@ add_action( 'widgets_init', 'anicon_widgets_init' );
 function anicon_scripts() {
 	wp_enqueue_style( 'anicon-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'anicon-style', 'rtl', 'replace' );
+	// wp_enqueue_style( 'theme-css', get_template_directory_uri() . '/css/theme.css', 'all');
+	// wp_enqueue_style( 'mobile-css', get_template_directory_uri() . '/css/mobile.css', 'all');
 
 	wp_deregister_script( 'jquery' );
 	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), null, true);
 
 	wp_enqueue_script( 'anicon-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'anicon-script', get_template_directory_uri() . '/js/script.js', array( 'jquery' ), '20151215', true );
+
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -224,4 +228,37 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Rename default post type.
+ */
+
+// function revcon_change_post_label() {
+//     global $menu;
+//     global $submenu;
+//     $menu[5][0] = 'Project';
+//     $submenu['edit.php'][5][0] = 'Project';
+//     $submenu['edit.php'][10][0] = 'Add Project';
+//     $submenu['edit.php'][16][0] = 'Project Tags';
+// }
+// function revcon_change_post_object() {
+//     global $wp_post_types;
+//     $labels = &$wp_post_types['post']->labels;
+//     $labels->name = 'Projects';
+//     $labels->singular_name = 'Project';
+//     $labels->add_new = 'Add Project';
+//     $labels->add_new_item = 'Add Project';
+//     $labels->edit_item = 'Edit Project';
+//     $labels->new_item = 'Project';
+//     $labels->view_item = 'View Project';
+//     $labels->search_items = 'Search Project';
+//     $labels->not_found = 'No Project found';
+//     $labels->not_found_in_trash = 'No Project found in Trash';
+//     $labels->all_items = 'All Projects';
+//     $labels->menu_name = 'Projects';
+//     $labels->name_admin_bar = 'Projects';
+// }
+ 
+// add_action( 'admin_menu', 'revcon_change_post_label' );
+// add_action( 'init', 'revcon_change_post_object' );
 

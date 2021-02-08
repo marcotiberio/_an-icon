@@ -440,15 +440,15 @@ dfn,
 cite,
 em,
 i {
-	/* font-style: italic;
+	font-style: italic;
 	text-decoration: underline;
-	text-underline-offset: 1.4px; */
+	text-underline-offset: 1.4px;
 }
 
 em:hover,
 i:hover {
-	/* font-style: italic;
-	text-decoration: none; */
+	font-style: italic;
+	text-decoration: none;
 }
 
 blockquote {
@@ -1038,8 +1038,8 @@ body {
 } */
 
 section {
-	/* scroll-margin-top: 110px;
-	margin-top: 5%; */
+	scroll-margin-top: 110px;
+	margin-top: 5%;
 	margin-bottom: 5%;
 	padding-left: 30px;
 	padding-right: 30px;
@@ -1847,7 +1847,7 @@ a.control_next {
 
 .swiper-container {
 	width: 100%;
-	height: auto;
+	height: 100%;
 }
 
 .swiper-slide {
@@ -1972,10 +1972,6 @@ a.control_next {
 	grid-template-columns: 2fr 1fr;
 }
 
-.home article .overall-event-title {
-	padding-top: 4px;
-}
-
 .home article .event-type h1 {
 	text-shadow: none;
 	font-size: 16px;
@@ -2046,7 +2042,6 @@ a.control_next {
 	font-size: 1.5rem;
 	line-height: 1.875rem;
 	color: #000000;
-	font-style: italic;
 }
 
 .home article .event-title .entry-title:hover {
@@ -2965,16 +2960,13 @@ a.control_next {
 	background-color: #ffffff;
 }
 
-#contact .section-title {
-	margin-left: calc(50% + 15px);
-}
-
 #contact .inside {
 	margin-top: 10px;
-	padding-top: 0;
+	padding-top: 10px;
 	display: grid;
 	grid-template-columns: repeat(8, 1fr);
 	column-gap: 1.875rem;
+	border-top: 1px solid #000000;
 }
 
 #contact .logos {
@@ -3009,15 +3001,9 @@ a.control_next {
 }
 
 #contact .inside .address {
-	margin-top: 20px;
+	margin-top: 40px;
 	font-size: 1rem;
 	line-height: 1.25rem;
-}
-
-#contact .inside .logos-text {
-	font-size: 12px; 
-	line-height: 15px;
-	margin-top: 0px;
 }
 
 #contact .inside .form {
@@ -3097,15 +3083,6 @@ input[type="submit"] {
 	cursor: pointer;
 }
 
-#contact .links {
-	display: flex;
-	flex-direction: row;
-}
-
-#contact .link {
-	margin-block-start: 15px;
-}
-
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -3125,14 +3102,16 @@ input[type="submit"] {
 }
 
 #contact .inside .left {
-    display: grid !important;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    row-gap: 0;
-    height: 360px;
+	grid-column-start: 1;
+	grid-column-end: 4;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	row-gap: 41.5px;
+
+	/* display: flex;
+	flex-direction: row; */
 }
 
 #contact .inside.logos .left p,
@@ -3147,10 +3126,9 @@ input[type="submit"] {
 
 #contact .inside .right {
 	display: flex;
-    flex-direction: column;
-    grid-column-start: 5;
-    grid-column-end: 9;
-	border-top: 1px solid #000000;
+
+	grid-column-start: 5;
+	grid-column-end: 9;
 }
 
 #contact .inside .right small {
@@ -3296,7 +3274,7 @@ input[type="submit"] {
 .post-template-event article .entry-info {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	padding: 4px 0 15px 0;
+	padding: 7px 0 15px 0;
 	border-top: 1px solid #000000;
 	border-bottom: 1px solid #000000;
 }
@@ -3326,8 +3304,7 @@ input[type="submit"] {
 }
 
 .single article .event-type p {
-	font-size: 24px !important;
-    line-height: 30px;
+	font-size: 24px;
 }
 
 .single article .event-type a:hover,
@@ -3343,10 +3320,6 @@ input[type="submit"] {
     margin-block-start: 0;
     margin-block-end: 0;
     text-align: right;
-}
-
-.single article .overall-event-title {
-	padding-top: 4px;
 }
 
 .single .main-title h2,
@@ -3366,7 +3339,7 @@ input[type="submit"] {
 .single .event-nav,
 .post-template-event .event-nav {
 	display: grid;
-	grid-template-columns: 10px 170px 10px;
+	grid-template-columns: 10px 190px 10px;
 }
 
 .single article .event-nav a,
@@ -3436,12 +3409,7 @@ input[type="submit"] {
 	font-size: 1.5rem;
 	line-height: 1.875rem;
 	/* margin-block-end: 150px; */
-	margin-block-end: 60px;
-}
-
-.single article .event-bios div,
-.post-template-event article .event-bios div {
-	margin-block-end: 30px !important;
+	margin-block-end: 30px;
 }
 
 .single article .main-description h6,
@@ -3483,14 +3451,13 @@ input[type="submit"] {
 .single article .main-title h2,
 .post-template-event article .main-title h2 {
 	margin-right: 6px;
-	width: 100%;
 }
 
 .single article .event-author,
 .post-template-event article .event-author {
 	display: contents;
 	color: black;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .single article .event-author a,
@@ -4390,14 +4357,6 @@ input[type="submit"] {
 		height: 60vh;
 	}
 
-	#contact .section-title {
-		margin-left: 0;
-	}
-
-	#contact .additional-mobile {
-		height: auto !important;
-	}
-
 	#contact .email {
 		font-size: 1.25rem;
 		line-height: 1.5625rem;
@@ -4411,15 +4370,14 @@ input[type="submit"] {
 
 	#contact .inside {
 		margin-top: 10px;
-		padding-top: 0;
-		display: flex;
-		flex-direction: column-reverse;
+		padding-top: 10px;
+		display: block;
 		column-gap: 1.875rem;
-		/* border-top: 1px solid #000000; */
+		border-top: 1px solid #000000;
 	}
 
 	#contact .inside .right {
-		margin-top: 0;
+		margin-top: 63px;
 	}
 
 	#contact .inside .form {
@@ -4823,74 +4781,9 @@ input[type="submit"] {
 		margin-top: 78px;
 	}
 
-	.single article .event-type a,
-	.post-template-event article .event-type a {
-		text-shadow: none !important;
-		width: 100% !important;
-		/* padding: 10px 1.5% 10px 0; */
-		/* margin-bottom: 10px; */
-		font-size: 1.25rem;
-    	line-height: 1.5rem;
-		margin-block-start: 0;
-		margin-block-end: 0;
-		text-align: left;
-		text-decoration: underline;
-		text-underline-offset: 1.4px;
-	}
-
-	.single article .event-type p {
-		font-size: 1.25rem;
-    	line-height: 1.5rem;
-	}
-
-
-
 }
 
 @media (min-width: 1024px) and (max-width: 1679px) {
-
-	.single article .main-description,
-	.post-template-event article .main-description {
-		margin-block-end: 50px;
-	}
-
-	.single article .event-bios div,
-	.post-template-event article .event-bios div {
-		margin-block-end: 25px !important;
-	}
-
-	.single article .main-description h6,
-	.post-template-event article .main-description h6 {
-		margin-block-start: 25px;
-		margin-block-end: 25px;
-	}
-
-	#contact .inside .logos-text {
-		font-size: 12px; 
-		line-height: 15px;
-		margin-top: 20px;
-	}
-
-	#contact .inside .address {
-		margin-top: 12px;
-		font-size: 1rem;
-		line-height: 1.25rem;
-	}
-
-	#backgroundMenu {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 106px !important;
-		background-color: white;
-	}
-
-	#members .name, 
-	#members .position {
-		font-size: 20px;
-		line-height: 25px;
-	}
 
 	.main-navigation {
 		font-size: 20px;
@@ -4899,12 +4792,6 @@ input[type="submit"] {
 
 	h1 {
 		font-size: 1.25rem;
-		line-height: 1.5rem;
-	}
-
-	.single article .event-type p,
-	.single article .event-type a {
-		font-size: 20px !important;
 		line-height: 1.5rem;
 	}
 

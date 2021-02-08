@@ -12,19 +12,17 @@ get_header();
 ?>
 
 	<div class="back">
-		<svg onclick="window.location.href='http://vpp.921.myftpupload.com/#seminars'" width="38" height="65" viewBox="0 0 38 65">
-			<defs>
-				<filter id="_" x="0" y="0" width="38" height="65" filterUnits="userSpaceOnUse">
-				<feOffset input="SourceAlpha"/>
-				<feGaussianBlur stdDeviation="1.5" result="blur"/>
-				<feFlood flood-opacity="0.6"/>
-				<feComposite operator="in" in2="blur"/>
-				<feComposite in="SourceGraphic"/>
-				</filter>
-			</defs>
-			<g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#_)">
-				<text id="_2" data-name="×" transform="translate(4.5 50.5)" font-size="48" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">×</tspan></text>
+		<svg onclick="window.location.href='/#events'" xmlns="http://www.w3.org/2000/svg" id="Livello_1" data-name="Livello 1" viewBox="0 0 31.41421 31.41421">
+			<g id="Raggruppa_172" data-name="Raggruppa 172">
+				<g id="Raggruppa_173" data-name="Raggruppa 173">
+				<line id="Linea_83" data-name="Linea 83" x1="0.70712" y1="30.70712" x2="30.70612" y2="0.70712" fill="none" stroke="#040405" stroke-width="2"></line>
+				<line id="Linea_84" data-name="Linea 84" x1="30.70712" y1="30.70612" x2="0.70712" y2="0.70712" fill="none" stroke="#040405" stroke-width="2"></line>
+				</g>
 			</g>
+		</svg>
+
+		<svg width="38" height="65" viewBox="0 0 38 65">
+			
 		</svg>
 	</div>
 
